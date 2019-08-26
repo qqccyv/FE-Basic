@@ -2,3 +2,68 @@
     margin: 0;
     padding: 0;
 }
+li {
+    list-style: none;
+}
+button {
+    border: 0;
+}
+body {
+    background-color: #F4F5F9;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    width: 1200px;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 30px;
+}
+.logo {
+    float: left;
+}
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+.nav li {
+    float: left;
+}
+.nav li a {
+    display: block;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #47484A;
+    text-decoration: none;
+}
+.nav li a:hover {
+    border-bottom: 2px solid #00A4FF;
+}
+.search input {
+    float: left;
+    width: 340px;
+    height: 38px;
+    margin-left: 70px;
+    border: 1px solid #00A5FF;
+    border-right: 0;
+    padding-left: 20px;
+    color: #E0E1E3;
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 40px;
+    background: url(images/btn.png);
+}
+.user {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 30px;
+    font-size: 14px;
+}
