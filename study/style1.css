@@ -82,10 +82,97 @@ body {
     margin-top: 30px;
     background: #1C036B url(images/banner2.jpg) no-repeat top center;
 }
+/* subnav模块 */
 .subnav {
     float: left;
     width: 150px;
     height: 420px;
     padding: 0 20px;
-    background-color: pink;
+    background: rgba(0, 0, 0, 0.3)
+}
+.subnav li {
+    height: 45px;
+    line-height: 45px;
+}
+.subnav li a {
+    font-size: 14px;
+    color: #FFFAFF;
+}
+.subnav li a:hover {
+    color: #00BAFF;
+}
+.subnav li a span {
+    float: right;
+}
+/* course模块 */
+.course {
+    float: right;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+.course-hd {
+    height: 48px;
+	background-color: #9bceea;
+    line-height: 48px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+.course-bd {
+    padding: 0 15px;
+}
+.course-bd ul {
+    /* margin-top: 10px;会出现外边距塌陷的问题 */
+    padding-top: 10px;
+}
+.course-bd li {
+    margin-top: 10px;
+    height: 50px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.course-bd li h4 {
+    font-size: 14px;
+    color: #4C4C4C;
+}
+.course-bd li p {
+    font-size: 12px;
+    color: #C6C6C6;
+}
+.course-bd a {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+}
+.course-bd a:hover {
+    background-color: #00A4FF;
+    color: #FFFFFF;
+}
+/* banner模块结束 */
+/* goods模块开始 */
+.goods {
+    height: 60px;
+    margin-top: 10px;
+    background-color: #fff;
+    line-height: 60px;
+}
+.goods h3 {
+    float: left;
+    margin: 0 35px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.goods-item {
+    float: left;
+    color: #bfbfbf;
+}
+.goods-item a {
+    margin: 0 30px;
+    color: #050505;
 }
