@@ -5,16 +5,22 @@
 li {
     list-style: none;
 }
+/* 去除按钮边框 */
 button {
     border: 0;
+}
+a {
+    text-decoration: none;
 }
 body {
     background-color: #F4F5F9;
 }
+/* 版心宽度，并居中 */
 .w {
     width: 1200px;
     margin: 0 auto;
 }
+/* header开始 */
 .header {
     width: 1200px;
     height: 42px;
@@ -41,6 +47,7 @@ body {
     color: #47484A;
     text-decoration: none;
 }
+/* 鼠标指向变化-出现下边框 */
 .nav li a:hover {
     border-bottom: 2px solid #00A4FF;
 }
@@ -65,5 +72,20 @@ body {
     height: 40px;
     line-height: 40px;
     margin-left: 30px;
+    color: #666;
     font-size: 14px;
+}
+/* header结束 */
+/* banner开始 */
+.banner {
+    height: 420px;
+    margin-top: 30px;
+    background: #1C036B url(images/banner2.jpg) no-repeat top center;
+}
+.subnav {
+    float: left;
+    width: 150px;
+    height: 420px;
+    padding: 0 20px;
+    background-color: pink;
 }
