@@ -176,3 +176,9 @@ body {
     margin: 0 30px;
     color: #050505;
 }
+.mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00A4FF;
+}
