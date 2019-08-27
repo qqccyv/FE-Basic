@@ -161,6 +161,7 @@ body {
     margin-top: 10px;
     background-color: #fff;
     line-height: 60px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 }
 .goods h3 {
     float: left;
@@ -182,3 +183,4 @@ body {
     font-size: 14px;
     color: #00A4FF;
 }
+/* goods模块结束 */
