@@ -2,6 +2,18 @@
     margin: 0;
     padding: 0;
 }
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
 li {
     list-style: none;
 }
@@ -232,3 +244,45 @@ body {
     color: #FF7445;
 }
 /* box模块结束 */
+/* foot模块开始 */
+.footer {
+    height: 415px;
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+.copyleft {
+    float: left;
+    margin-top: 30px;
+}
+.footer p {
+    margin: 20px 0;
+    font-size: 12px;
+    color: #666666;
+}
+.app {
+    display: block;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+    text-align: center;
+    line-height: 35px;
+}
+.links {
+    float: right;
+}
+.links dl {
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.links dt {
+    font-size: 16px;
+    height: 35px;
+    color: #494949;
+}
+.links dd a {
+    font-size: 12px;
+    color: #333333;
+}
+/* foot模块结束 */
