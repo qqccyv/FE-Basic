@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .one ,
+    .two ,
+    .three  {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+    .two {
+        /* 相对定位的盒子边偏移以后，原位置不变，相当于一个标准流位置 */
+        position: relative;
+        left: 100px;
+        /* right: 200px; */
+        /* bottom: 100px; */
+        top: 100px;
+        background-color: purple;
+    }
+    </style>
+</head>
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+</body>
+</html>
