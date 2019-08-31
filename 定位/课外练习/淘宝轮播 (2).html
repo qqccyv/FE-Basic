@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .taobao {
+        /* 子绝父相 */
+        position: relative;
+        width: 520px;
+        height: 280px;
+        margin: 100px auto;
+    }
+    .left,
+    .right {
+        /* 绝对定位浮于盒子表面 */
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        width: 20px;
+        height: 30px;
+        /* text-align: center; */
+        background-color: rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: #fff;
+        line-height: 30px;
+    }
+    .left {
+        left: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .right {
+        right: 0;
+        border-radius: 15px 0 0 15px;
+        text-align: right;
+    }
+    .taobao a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    </style>
+</head>
+<body>
+    <div class="taobao">
+        <img src="taobao.jpg" alt="">
+        <a href="#" class="left">&lt;</a>
+        <a href="#" class="right">&gt;</a>
+    </div>
+</body>
+</html>
