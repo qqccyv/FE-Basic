@@ -32,6 +32,21 @@ body {
     width: 1200px;
     margin: 0 auto;
 }
+/* fixbar模块 */
+.fixbar {
+    position: fixed;
+    left: 50%;
+    margin-left: -820px;
+    top: 50px;
+    width: 150px;
+    height: 370px;
+    padding: 25px;
+    background-color: #fff;
+}
+.fixbar ul li {
+    height: 35px;
+    line-height: 35px;
+}
 /* header开始 */
 .header {
     width: 1200px;
@@ -231,7 +246,8 @@ body {
 .box-bd li img {
     width: 100%;
 }
-.box-bd .hot {
+.box-bd .hot,
+.box-bd .new  {
     position: absolute;
     top: 0;
     right: -4px;
