@@ -219,6 +219,7 @@ body {
     width: 1215px;
 }
 .box-bd li {
+    position: relative;
     float: left;
     width: 228px;
     height: 270px;
@@ -229,6 +230,12 @@ body {
 }
 .box-bd li img {
     width: 100%;
+}
+.box-bd .hot {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 40px;
 }
 .box-bd li h4 {
     margin: 20px;
