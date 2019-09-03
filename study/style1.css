@@ -93,6 +93,7 @@ body {
     width: 50px;
     height: 40px;
     background: url(images/btn.png);
+    cursor: pointer;
 }
 .user {
     float: left;
