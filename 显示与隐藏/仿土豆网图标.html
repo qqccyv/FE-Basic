@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 222px;
+            height: 220px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        .msk {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 222px;
+            height: 220px;
+            background: url(images/arr.png) no-repeat center center rgba(0, 0, 0, 0.3);
+        }
+        .box a:hover .msk {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">
+            <img src="images/3.jpg" alt="">
+            <div class="msk">
+            </div>
+        </a>
+    </div>
+</body>
+</html>
