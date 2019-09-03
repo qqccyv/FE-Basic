@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            /* 行内块元素可以由内部文字撑开大小 */
+            display: inline-block;
+            margin: 100px;
+            padding-left: 15px;
+            height: 33px;
+            background: url(images/to.png) no-repeat;
+            color: #fff;
+        }
+        a span {
+            display: inline-block;
+            padding-right: 15px;
+            height: 33px;
+            /* span标签负责右边门，所以背景图需要右对齐 */
+            background: url(images/to.png) no-repeat right top;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <span>首页</span>
+    </a>
+    <a href="#">
+        <span>公司新闻</span>
+    </a>
+</body>
+</html>
