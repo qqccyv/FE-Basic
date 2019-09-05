@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background: pink;
+            /* 解决办法。给父元素设置一条顶边框 */
+            /* border-top: 1px solid transparent; */
+            /* 第二种。给父元素设置一个上内边距 */
+            /* padding: 1px 0 0; */
+            /* 第三种。 */
+            overflow: hidden;
+        }
+        .son {
+            margin-top: 100px;
+            width: 200px;
+            height: 200px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
