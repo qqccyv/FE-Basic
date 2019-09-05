@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .weixin {
+            height: 499px;
+            background: url(images/wx.jpg);/*  repeat-x; */
+        }
+        .weixin ul li {
+            margin: 20px 5px 0;
+            list-style: none;
+            float: left;
+        }
+        .weixin ul li a {
+            /* 必须要转换为行内块元素，才能被内部内容撑开大小 */
+            display: inline-block;
+            height: 33px;
+            background: url(images/to.png) no-repeat;
+            padding-left: 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav .nav1 {
+            display: inline-block;
+            height: 33px;
+            background: url(images/to.png) no-repeat right top;
+            padding-right: 15px;
+            line-height: 33px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="weixin">
+        <ul>
+            <li><a href="#" class="nav"><span class="nav1">首页</span></a></li>
+            <li><a href="#" class="nav"><span class="nav1">帮助与反馈</span></a></li>
+            <li><a href="#" class="nav"><span class="nav1">公众平台</span></a></li>
+            <li><a href="#" class="nav"><span class="nav1">开放平台</span></a></li>
+            <li><a href="#" class="nav"><span class="nav1">三个字</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>
