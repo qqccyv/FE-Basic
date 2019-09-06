@@ -36,11 +36,13 @@
             line-height: 33px;
             font-size: 14px;
         }
-        .weixin ul li .nav:hover {
-            background: url(images/ao.png) no-repeat;
+        .nav:hover,
+        .nav:hover .nav1 {
+            /* 限定hover属性只标定切换图片image，用简写会出现默认定位格式层叠掉上面的定位 */
+            background-image: url(images/ao.png);
         }
         .weixin ul li .nav1:hover {
-            background: url(images/ao.png) no-repeat right top;
+            /* background: url(images/ao.png) no-repeat right top; */
         }
     </style>
 </head>
