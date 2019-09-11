@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .f {
+            float: left;
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        .d {
+            width: 108px;
+            height: 114px;
+            background: url(images/abcd.jpg) no-repeat -357px -5px;
+        }
+        
+        .e {
+            width: 106px;
+            height: 113px;
+            background: url(images/abcd.jpg) no-repeat -477px -6px;
+        }
+        
+        .n {
+            width: 111px;
+            height: 112px;
+            background: url(images/abcd.jpg) no-repeat -256px -275px;
+        }
+        
+        .g {
+            width: 105px;
+            height: 108px;
+            background: url(images/abcd.jpg) no-repeat -97px -141px;
+        }
+        
+        .y {
+            width: 112px;
+            height: 110px;
+            background: url(images/abcd.jpg) no-repeat -365px -556px;
+        }
+        
+        .u {
+            width: 114px;
+            height: 109px;
+            background: url(images/abcd.jpg) no-repeat -474px -422px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="deng clearfix">
+        <div class="d f"></div>
+        <div class="e f"></div>
+        <div class="n f"></div>
+        <div class="g f"></div>
+    </div>
+    <div class="yu">
+        <div class="y f"></div>
+        <div class="u f"></div>
+    </div>
+</body>
+
+</html>
