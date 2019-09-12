@@ -1,0 +1,176 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 图标字体样式声明 */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.style-red {
+    color: #C81C1A;
+}
+
+
+/* 顶部快捷导航开始 */
+
+.shortcut {
+    height: 31px;
+    background-color: #F1F1F1;
+    line-height: 31px;
+}
+
+.shortcut li {
+    float: left;
+}
+
+.spacer {
+    width: 1px;
+    height: 12px;
+    background-color: #696969;
+    margin: 9px 15px 0;
+}
+
+.shortcut .icomoon {
+    height: 31px;
+    line-height: 26px;
+    font-family: 'icomoon';
+    font-size: 16px;
+    color: #797979;
+}
+
+
+/* 顶部快捷导航结束 */
+
+
+/* header模块开始 */
+
+.header {
+    position: relative;
+    height: 105px;
+    /* background-color: pink; */
+}
+
+
+/* logo模块 */
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 175px;
+    height: 56px;
+    /* background-color: green; */
+}
+
+.logo a {
+    display: block;
+    width: 175px;
+    height: 56px;
+    background: url(../img/logo.png) no-repeat;
+    font-size: 0;
+}
+
+
+/* 搜索框模块 */
+
+.search {
+    position: absolute;
+    top: 25px;
+    left: 348px;
+}
+
+.text {
+    float: left;
+    width: 445px;
+    height: 32px;
+    padding-left: 10px;
+    border: 2px solid #AF191B;
+    color: #ccc;
+}
+
+
+/* 搜索按钮 */
+
+.btn {
+    float: left;
+    width: 82px;
+    height: 36px;
+    background-color: #AF191B;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/* 购物车模块 */
+
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #DEDEDE;
+    background-color: #F7F7F7;
+}
+
+.car {
+    font-family: 'icomoon';
+    color: #E55F5E;
+}
+
+.arrow {
+    font-family: 'icomoon';
+    /* font-size: 14px; */
+    margin-left: 5px;
+    color: #A3A3A3;
+}
+
+
+/* 小图标 */
+
+.count {
+    position: absolute;
+    top: -5px;
+    left: 100px;
+    background-color: #E5010E;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 3px;
+    color: #fff;
+    border-radius: 7px 7px 7px 0;
+}
+
+
+/* 热词 */
+
+.hotwords {
+    position: absolute;
+    top: 65px;
+    left: 348px;
+}
+
+.hotwords a {
+    margin: 0 12px;
+}
+
+
+/* header模块结束 */
