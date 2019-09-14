@@ -1,0 +1,213 @@
+.main {
+    width: 980px;
+    height: 455px;
+    /* background-color: pink; */
+    margin: 10px 0 0 220px;
+}
+
+
+/* .focus */
+
+.focus {
+    position: relative;
+    width: 720px;
+    height: 455px;
+    /* background-color: purple; */
+}
+
+.newsflash {
+    position: relative;
+    width: 250px;
+    height: 455px;
+    /* border: 1px solid #E5E5E5; */
+    /* background-color: skyblue; */
+}
+
+.arrow-1 {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    width: 24px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow-r {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: 0;
+    width: 24px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+}
+
+.circle {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.circle li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    /* 给边框是圆圈，给背景色是圆形 */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.current {
+    background-color: #fff;
+}
+
+
+/* .newsflash */
+
+.news-hd {
+    height: 32px;
+    padding: 0 15px;
+    line-height: 32px;
+    border: 1px solid #E5E5E5;
+    border-bottom: 1px dashed #EAEAEA;
+}
+
+.news-hd h3 {
+    font-weight: normal;
+    float: left;
+}
+
+.news-hd a {
+    float: right;
+}
+
+.news-bd {
+    height: 118px;
+    padding: 12px 0 0 15px;
+    border: 1px solid #E5E5E5;
+    border-top: none;
+}
+
+.news-bd li {
+    height: 22px;
+}
+
+
+/* .lifeservice */
+
+.lifeservice {
+    height: 208px;
+    border: 1px solid #E5E5E5;
+    border-top: 0;
+    overflow: hidden;
+}
+
+
+/* bargin */
+
+.bargin {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    width: 250px;
+    background-color: pink;
+}
+
+.lifeservice ul {
+    width: 255px;
+}
+
+.lifeservice li {
+    position: relative;
+    float: left;
+    width: 62px;
+    height: 70px;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.lifeservice li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.lifeservice li i {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: pink;
+    margin: 10px auto;
+    background: url(../img/icons.png) no-repeat;
+}
+
+.lifeservice li p {
+    text-align: center;
+}
+
+.lifeservice .lifeservice_hua {
+    background-position: -17px -16px;
+}
+
+.lifeservice .lifeservice_ji {
+    background-position: -80px -17px;
+}
+
+.lifeservice .hot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 15px;
+    background: url(../img/jian.jpg) no-repeat;
+}
+
+.lifeservice .lifeservice_dian {
+    background-position: -142px -17px;
+}
+
+.lifeservice .lifeservice_you {
+    background-position: -206px -17px;
+}
+
+.lifeservice .lifeservice_cai {
+    background-position: -18px -88px;
+}
+
+.lifeservice .lifeservice_jia {
+    background-position: -79px -88px;
+}
+
+.lifeservice .lifeservice_jiu {
+    background-position: -142px -88px;
+}
+
+.lifeservice .lifeservice_huo {
+    background-position: -208px -88px;
+}
+
+.lifeservice .lifeservice_zhong {
+    background-position: -16px -160px;
+}
+
+.lifeservice .lifeservice_li {
+    background-position: -78px -159px;
+}
+
+.lifeservice .lifeservice_lipin {
+    background-position: -142px -160px;
+}
+
+.lifeservice .lifeservice_bai {
+    background-position: -208px -160px;
+}

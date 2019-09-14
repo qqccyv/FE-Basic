@@ -1,0 +1,351 @@
+/*公共样式*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*版心*/
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.style-red {
+    color: #C9131F;
+}
+
+.spacer {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 12px 0;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fr .icomoon {
+    font-family: 'icomoon';
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+/* 顶部快捷导航开始了 */
+
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+    line-height: 31px;
+}
+
+.shortcut li {
+    float: left;
+}
+
+
+/* 顶部快捷导航结束 */
+
+
+/* header开始 */
+
+.header {
+    position: relative;
+    height: 105px;
+    /* background-color: pink; */
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    margin-top: -28px;
+    left: 0;
+    width: 175px;
+    height: 56px;
+    /* background-color: purple; */
+}
+
+.logo a {
+    display: inline-block;
+    width: 175px;
+    height: 56px;
+    background: url(../img/logo.png) no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.search {
+    position: absolute;
+    top: 25px;
+    left: 348px;
+}
+
+.text {
+    float: left;
+    width: 445px;
+    height: 32px;
+    border: 2px solid #B61826;
+    border-right: 0;
+    padding-left: 10px;
+}
+
+.btn {
+    float: left;
+    width: 82px;
+    height: 36px;
+    background-color: #B61826;
+    color: #fff;
+    border: none;
+}
+
+.hotwords {
+    position: absolute;
+    top: 65px;
+    left: 348px;
+}
+
+.hotwords a {
+    /* font-size: 16px; */
+    margin: 0 10px;
+}
+
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    float: right;
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #F7F7F7;
+    border: 1px solid #DFDFDF;
+    text-align: center;
+}
+
+.car {
+    font-family: 'icomoon';
+    color: #D95E56;
+}
+
+.arrow {
+    font-family: 'icomoon';
+    margin-left: 5px;
+}
+
+.count {
+    position: absolute;
+    top: -5px;
+    /* 为了文字向右走 ，所以应该左侧对齐 */
+    left: 100px;
+    background-color: #E5010E;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 3px;
+    color: #fff;
+    border-radius: 7px 7px 7px 0;
+}
+
+
+/* header结束 */
+
+
+/* nav开始 */
+
+.nav {
+    height: 45px;
+    border-bottom: 2px solid #B3181C;
+}
+
+.dropdown {
+    width: 209px;
+    height: 45px;
+    /* background-color: pink; */
+}
+
+.dropdown .dt {
+    width: 100%;
+    height: 100%;
+    background-color: #B2191B;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.dropdown .dd {
+    width: 209px;
+    height: 465px;
+    background-color: #C81622;
+    margin-top: 2px;
+}
+
+.menu_item {
+    height: 31px;
+    line-height: 31px;
+    margin-left: 1px;
+    padding-left: 10px;
+}
+
+.menu_item a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.menu_item:hover,
+.menu_item:hover a {
+    background-color: #fff;
+    color: #C81622;
+}
+
+.menu_item i {
+    float: right;
+    font-family: 'icomoon';
+    font-size: 18px;
+    color: #fff;
+    padding-right: 10px;
+}
+
+.navitems {
+    margin-left: 10px;
+}
+
+.navitems li {
+    float: left;
+}
+
+.navitems a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 25px;
+    font-size: 16px;
+    /* color: #353535; */
+}
+
+
+/* nav结束 */
+
+
+/* footer模块开始 */
+
+.footer {
+    height: 386px;
+    padding-top: 30px;
+    background-color: #F5F5F5;
+}
+
+.mod_service {
+    height: 79px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.mod_service li {
+    float: left;
+    padding-left: 35px;
+    width: 205px;
+    height: 79px;
+    /* background-color: red; */
+}
+
+.mod_service .mod_service_ico {
+    /* 浮动的盒子可以直接给大小，不用转换
+    display: block; */
+    float: left;
+    width: 49px;
+    height: 49px;
+    /* 背景是透明背景，可以不用给形状
+    border-radius: 50%; */
+}
+
+.mod_service_zheng {
+    background: url(../img/icons.png) no-repeat -253px -3px;
+}
+
+.mod_service_ji {
+    background: url(../img/icons.png) no-repeat -254px -54px;
+}
+
+.mod_service_wu {
+    background: url(../img/icons.png) no-repeat -257px -106px;
+}
+
+.mod_service_te {
+    background: url(../img/icons.png) no-repeat -258px -157px;
+}
+
+.mod_service_bang {
+    background: url(../img/icons.png) no-repeat -257px -208px;
+}
+
+.mod_service_text {
+    float: left;
+    margin-left: 5px;
+}
+
+.mod_service h5 {
+    /* h5标签自带默认的上下margin，所以适当少给数值 */
+    margin: 5px 0;
+}
+
+.mod_help {
+    height: 179px;
+    border-bottom: 1px solid #ECECEC;
+    /* background-color: pink; */
+}
+
+.mod_help .mod_help_list {
+    float: left;
+    width: 150px;
+    height: 159px;
+    padding: 20px 0 0 50px;
+}
+
+.mod_help_list dt {
+    font-size: 16px;
+    /* font-weight: 700; */
+    height: 25px;
+}
+
+.mod_help_list dd {
+    height: 22px;
+}
+
+.mod_help_list img {
+    margin: 10px 0;
+}
+
+.mod_help_bang,
+.mod_help_list p {
+    margin-left: 10px;
+}
+
+.mod_copyright {
+    text-align: center;
+}
+
+.copyright_links {
+    margin-top: 20px;
+    height: 30px;
+}
+
+.copyright_links a {
+    margin: 0 13px;
+}
+
+.mod_copyright .contact {
+    height: 20px;
+}
+
+
+/* footer模块结束 */
