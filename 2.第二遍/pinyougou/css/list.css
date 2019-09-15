@@ -1,0 +1,85 @@
+/* 列表页样式 */
+
+
+/* logo样式 */
+
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    height: 32px;
+    padding: 5px 0 0 15px;
+    border-left: 1px solid #c81523;
+}
+
+
+/* nav部分 */
+
+
+/* 左侧 */
+
+.sk_list li {
+    float: left;
+    line-height: 45px;
+}
+
+.sk_list li a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 15px;
+}
+
+.sk_list li a:hover {
+    color: #c81523;
+}
+
+.sk_con li {
+    float: left;
+    line-height: 45px;
+}
+
+.sk_con li a {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 0 40px;
+}
+
+.sk_con li .current {
+    color: #c81523;
+}
+
+.sk_con span {
+    font-family: 'icomoon';
+}
+
+
+/* container */
+
+.sk_bd {
+    margin-top: 25px;
+}
+
+.sk_goods {
+    width: 288px;
+    height: 458px;
+    border: 1px solid red;
+}
+
+.sk_goods h5 {
+    padding: 10px 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sk_goods .sk_goods_price {
+    padding: 10px;
+    font-size: 22px;
+    color: #c81523;
+}
+
+.sk_goods del {
+    font-size: 14px;
+    color: #A4A4A4;
+    font-weight: 700px;
+}
