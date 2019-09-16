@@ -61,19 +61,30 @@
 }
 
 .sk_goods {
+    position: relative;
+    float: left;
     width: 288px;
     height: 458px;
+    border: 1px solid transparent;
+    margin: 0 12px 15px 0;
+}
+
+.sk_goods:hover {
     border: 1px solid red;
 }
 
+.sk_bd ul {
+    width: 1212px;
+}
+
 .sk_goods h5 {
-    padding: 10px 10px 0;
+    padding: 10px;
     font-size: 14px;
     font-weight: 400;
 }
 
 .sk_goods .sk_goods_price {
-    padding: 10px;
+    padding: 0 10px;
     font-size: 22px;
     color: #c81523;
 }
@@ -83,3 +94,88 @@
     color: #A4A4A4;
     font-weight: 700px;
 }
+
+.sk_goods_progress {
+    padding: 0 10px;
+}
+
+.bar {
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    margin: 0 5px;
+    border: 1px solid #ED282E;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.bar_in {
+    width: 87%;
+    height: 10px;
+    background-color: #ED282E;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.sk_goods_progress i,
+.sk_goods_progress em {
+    color: #ED282E;
+}
+
+.sk_goods_buy {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 288px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #B1191A;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* page模块 */
+
+.page {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.page a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    background-color: #F7F7F7;
+}
+
+.page .pn_prev,
+.page .pn_next {
+    width: 82px;
+}
+
+.page_num .dotted,
+.page_num .current {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.page_skip input {
+    width: 46px;
+    height: 36px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.page_skip button {
+    width: 54px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background-color: #F7F7F7
+}
+
+
+/* page模块 */

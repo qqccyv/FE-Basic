@@ -304,7 +304,27 @@
 }
 
 .w329 {
+    position: relative;
     width: 329px;
+}
+
+.w329 ul {
+    position: absolute;
+    left: 140px;
+    bottom: 15px;
+}
+
+.w329 ul li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #423D41;
+    cursor: pointer;
+}
+
+.w329 .current {
+    background-color: #fff;
 }
 
 .w219 {
