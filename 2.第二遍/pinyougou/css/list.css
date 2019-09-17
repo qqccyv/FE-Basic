@@ -168,6 +168,12 @@
     height: 36px;
     border: 1px solid #ccc;
     text-align: center;
+    transition: all 0.3s;
+}
+
+.page_skip input:focus {
+    width: 88px;
+    border: 1px solid skyblue;
 }
 
 .page_skip button {

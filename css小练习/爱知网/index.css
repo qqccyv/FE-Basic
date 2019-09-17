@@ -1,0 +1,471 @@
+/* 默认样式清除 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 3000px;
+}
+
+
+/* 版心 */
+
+.w {
+    width: 1142px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+i {
+    font-style: normal;
+}
+
+
+/* 公共样式 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a:hover {
+    color: red;
+}
+
+
+/* 导航开始 */
+
+.head {
+    height: 80px;
+    line-height: 80px;
+    /* background-color: pink; */
+}
+
+
+/* 左侧导航 */
+
+.logo {
+    float: left;
+    margin: 15px 0 0 10px;
+}
+
+.logo a {
+    display: block;
+    width: 90px;
+    height: 55px;
+    background: url(images/logo.png) no-repeat;
+    font-size: 0;
+}
+
+.list li {
+    float: left;
+    margin-left: 50px;
+}
+
+.list a {
+    color: black;
+    font-size: 14px;
+}
+
+.list a:hover {
+    color: red;
+}
+
+
+/* 右侧导航 */
+
+.rightsidebar li {
+    float: left;
+    margin-left: 20px;
+}
+
+.rightsidebar a {
+    font-size: 14px;
+    color: #15C388;
+}
+
+.rightsidebar a:hover {
+    color: red;
+}
+
+
+/* 导航结束 */
+
+
+/* banner开始 */
+
+.banner {
+    height: 420px;
+    background: url(images/11.jpg) no-repeat;
+}
+
+.links {
+    position: relative;
+    width: 1142px;
+    height: 420px;
+}
+
+.joinus {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 210px;
+    height: 120px;
+    /* margin-top: 100px; */
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.joinus h5 {
+    /* float: left; */
+    height: 20px;
+    padding-left: 10px;
+    border-left: 5px solid #FD7C54;
+    color: #fff;
+    font-weight: 400;
+}
+
+.num {
+    display: block;
+    float: left;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.joinus span {
+    display: block;
+    float: right;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.links .start a {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    /* margin-top: 15px; */
+    background-color: #FC7B53;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.start a:hover {
+    color: red;
+    background-color: #fff;
+}
+
+
+/* banner结束 */
+
+
+/* main开始 */
+
+
+/* hot */
+
+.hot {
+    position: relative;
+    height: 365px;
+    margin-top: 70px;
+    border-top: 1px solid #ccc;
+}
+
+.pic-l {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 560px;
+    height: 315px;
+    background: url(images/1.jpg) no-repeat;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.pic-r {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 560px;
+    height: 315px;
+    background: url(images/3.jpg) no-repeat;
+    text-align: center;
+    color: #fff;
+}
+
+.course {
+    width: 295px;
+    height: 100px;
+    margin: 70px auto 25px;
+    line-height: 100px;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    margin-left: -62px;
+    top: -18px;
+    width: 124px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #fff;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+
+/* recommend */
+
+.recommend {
+    position: relative;
+    height: 335px;
+    margin-top: 90px;
+    border-top: 1px solid #ccc;
+}
+
+.class {
+    position: relative;
+    width: 264px;
+    height: 290px;
+    margin-right: 25px;
+}
+
+.pic-top {
+    height: 150px;
+}
+
+.class img {
+    width: 100%;
+}
+
+.word-b {
+    width: 238px;
+    height: 114px;
+    padding: 12px;
+    border: 1px solid #F0F0F0;
+}
+
+.word-b h6 {
+    height: 28px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.class a {
+    position: absolute;
+    left: 50%;
+    margin-left: -117px;
+    bottom: 15px;
+    display: block;
+    width: 235px;
+    height: 38px;
+    /* margin-top: 12px; */
+    line-height: 38px;
+    border-radius: 5px;
+    background-color: #15C388;
+    color: #fff;
+    text-align: center;
+}
+
+.word-b {
+    font-size: 12px;
+    color: #66656A;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.class .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 66px;
+}
+
+.class-list {
+    width: 1200px;
+    margin-top: 45px;
+}
+
+.person {
+    position: relative;
+    height: 193px;
+    margin-top: 90px;
+    border-top: 1px solid #ccc;
+}
+
+.niu {
+    width: 330px;
+    height: 120px;
+    margin: 45px 18px 0 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.person img {
+    float: left;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.niu ul {
+    margin: 20px 0 0 15px;
+}
+
+.niu .one {
+    height: 30px;
+    color: #14C287;
+}
+
+.niu .two {
+    width: 75px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 25px;
+    background-color: #FF933E;
+    border-radius: 17px;
+    color: #fff;
+}
+
+.niu .three {
+    margin-top: 15px;
+}
+
+.b-links {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.b-links a {
+    float: right;
+    height: 30px;
+    padding: 0 15px;
+    margin: 0 15px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    color: #66656A;
+}
+
+
+/* main结束 */
+
+
+/* footer开始 */
+
+.footer {
+    /* position: relative; */
+    height: 200px;
+    margin-top: 50px;
+    background-color: #515151;
+    text-align: center;
+}
+
+
+/* .foot-logo {
+    float: left;
+    margin-top: 30px;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin: 0 12px 0;
+    color: #fff;
+}
+
+.footer-links {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 50px;
+    width: 400px;
+    height: 20px;
+    color: #fff;
+}
+
+.footer .copyright {
+    position: absolute;
+    color: #8A8E99;
+} */
+
+.footer .up {
+    width: 1142px;
+    height: 125px;
+    background: url(images/foot-logo.png) no-repeat 0 30px;
+}
+
+.footer-links {
+    display: inline-block;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 12px;
+}
+
+.footer-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8A8E99;
+}
+
+.down {
+    width: 90%;
+    height: 74px;
+    margin: 0 auto;
+    border-top: 1px solid #ccc;
+}
+
+
+/* footer结束 */
