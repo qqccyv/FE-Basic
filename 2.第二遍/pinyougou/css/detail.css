@@ -1,0 +1,268 @@
+/* 详情页的样式文件 */
+
+
+/* 面包屑导航开始 */
+
+.crumb_wrap {
+    margin: 20px 0 5px;
+}
+
+.crumb_wrap a {
+    margin-right: 10px;
+}
+
+
+/* 面包屑导航结束 */
+
+
+/* 产品介绍模块开始 */
+
+
+/* 图片展示-左侧 */
+
+.preview_wrap {
+    width: 400px;
+    height: 590px;
+    /* background-color: pink; */
+}
+
+.preview_img {
+    width: 398px;
+    height: 398px;
+    border: 1px solid #ccc;
+}
+
+.preview_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.preview_list {
+    height: 60px;
+}
+
+.preview_list {
+    position: relative;
+    height: 60px;
+    /* background-color: purple; */
+    margin-top: 60px;
+}
+
+.list_item {
+    width: 320px;
+    height: 60px;
+    /* background-color: pink; */
+    margin: 0 auto;
+}
+
+.list_item li {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin: 0 2px;
+    /* background-color: skyblue; */
+    border: 2px solid transparent;
+}
+
+.list_item li img {
+    width: 100%;
+    height: 100%;
+}
+
+.list_item li.current {
+    border: 2px solid red;
+}
+
+.iteminfo_wrap {
+    width: 718px;
+}
+
+.arrow_prev,
+.arrow_next {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 22px;
+    height: 32px;
+    /* background-color: pink; */
+}
+
+.arrow_prev {
+    left: 0;
+    background: url(../upload/disabled-prev.png) no-repeat;
+}
+
+.arrow_next {
+    right: 0;
+    background: url(../upload/disabled-next.png) no-repeat;
+}
+
+
+/* 右侧盒子 */
+
+.sku_name {
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.summary dl {
+    overflow: hidden;
+}
+
+.news {
+    height: 30px;
+    color: red;
+}
+
+.summary_price,
+.summary_promotion {
+    position: relative;
+    padding: 10px 0;
+    background-color: #FDE9EA;
+}
+
+.summary dt,
+.summary dd {
+    float: left;
+}
+
+.summary dt {
+    width: 60px;
+    padding-left: 10px;
+    line-height: 36px;
+}
+
+.price {
+    font-size: 24px;
+    color: red;
+}
+
+.summary_price a {
+    color: red;
+}
+
+.remark {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.summary_promotion dd {
+    width: 450px;
+    line-height: 36px;
+}
+
+.summary_promotion em {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    background-color: red;
+}
+
+.summary_support dd {
+    line-height: 36px;
+}
+
+.choose_color dt {
+    height: 41px;
+    line-height: 41px;
+}
+
+.choose_color a {
+    display: inline-block;
+    width: 80px;
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    border: 1px solid transparent;
+    background-color: #F7F7F7;
+}
+
+.summary a.current {
+    border: 1px solid red;
+}
+
+.choose_version {
+    margin: 10px 0;
+}
+
+.choose_version a,
+.choose_type a {
+    display: inline-block;
+    height: 33px;
+    padding: 0 10px;
+    line-height: 33px;
+    background-color: #F7F7F7;
+    border: 1px solid transparent;
+}
+
+
+/* .choose_version a.current {
+    border: 1px solid red;
+}
+
+.choose_type a.current {
+    border: 1px solid red;
+
+
+} */
+
+.choose_btns {
+    margin-top: 20px;
+}
+
+.choose_amount {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 46px;
+    background-color: pink;
+}
+
+.addcar {
+    float: left;
+    width: 145px;
+    height: 46px;
+    line-height: 46px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: red;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.choose_amount input {
+    width: 33px;
+    height: 44px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.add,
+.reduce {
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.add {
+    top: 0;
+    right: 0;
+}
+
+.reduce {
+    bottom: 0;
+    right: 0;
+    cursor: not-allowed;
+}
+
+
+/* 产品介绍模块结束 */
