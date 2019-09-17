@@ -266,3 +266,51 @@
 
 
 /* 产品介绍模块结束 */
+
+
+/* 产品的详细描述开始 */
+
+.aside {
+    width: 208px;
+    height: 1000px;
+    border: 1px solid #ccc;
+}
+
+.tab_list {
+    height: 34px;
+    /* background-color: pink; */
+    overflow: hidden;
+}
+
+.tab_list li {
+    float: left;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.first_tab {
+    width: 104px;
+}
+
+.second_tab {
+    width: 103px;
+    border-left: 1px solid #ccc;
+}
+
+.tab_list .current {
+    background-color: #fff;
+    border-bottom: none;
+    color: red;
+}
+
+.detail {
+    width: 978px;
+    height: 1000px;
+    border: 1px solid #ccc;
+}
+
+
+/* 产品的详细描述结束 */
