@@ -272,7 +272,7 @@
 
 .aside {
     width: 208px;
-    height: 1000px;
+    /* height: 1000px; */
     border: 1px solid #ccc;
 }
 
@@ -308,8 +308,70 @@
 
 .detail {
     width: 978px;
-    height: 1000px;
+    /* height: 1000px; */
+    /* border: 1px solid #ccc; */
+}
+
+.tab-con {
+    padding: 0 10px;
+}
+
+.tab-con li img {
+    width: 100%;
+}
+
+.tab-con li {
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-con li h5 {
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-con li a {
+    display: block;
+    width: 83px;
+    height: 30px;
+    margin: 10px auto;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f1f1f1;
     border: 1px solid #ccc;
+}
+
+
+/* 右侧 */
+
+.detail_tab_list {
+    height: 39px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.detail_tab_list li {
+    float: left;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.detail_tab_list .current {
+    background-color: red;
+    color: #fff;
+}
+
+.item_info {
+    padding: 20px 0 0 20px;
+}
+
+.more {
+    float: right;
+    font-weight: 700;
+    font-family: 'icomoon'
 }
 
 
