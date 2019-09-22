@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 只有第一和最后一个 */
+        /* 其他要用数字表示序列号 */
+        
+        ul li:first-child {
+            background-color: pink;
+        }
+        
+        ul li:last-child {
+            background-color: purple;
+        }
+        /* 要第几个，括号里面就写第几个 */
+        
+        ul li:nth-child(8) {
+            background-color: orange;
+        }
+        
+        ul li:nth-child(6) {
+            background-color: blue;
+        }
+        
+        ul li:nth-child(3) {
+            background-color: green;
+        }
+        /* ul li:second-child {
+            background-color: skyblue;
+        } */
+        /* 选中偶数部分 */
+        /* ol li:nth-child(even) {
+            background-color: orange;
+        } */
+        /* 选中奇数部分 */
+        /* ol li:nth-child(odd) {
+            background-color: green;
+        } */
+        /* n是公式，n从0开始计算 */
+        /*         
+        ol li:nth-child(n) {
+            background-color: pink;
+        }
+        
+        ol li:nth-child(2n) {
+            background-color: blue;
+        }
+        
+        ol li:nth-child(2n+1) {
+            background-color: orange;
+        } */
+        /* 从第五个（包含第五个）开始往后选择 */
+        
+        ol li:nth-child(n+5) {
+            background-color: orange;
+        }
+        /* 从第四个开始往前选择，包含第四个 */
+        
+        ol li:nth-child(-n+4) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ol>
+</body>
+
+</html>

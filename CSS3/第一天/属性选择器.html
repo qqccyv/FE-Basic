@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+        /* 属性选择器使用方法 */
+        /* 选择的是即使button又是disabled这个属性的元素 */
+        
+        button[disabled] {
+            cursor: default;
+        }
+        
+        input[required] {
+            border: 1px solid red;
+            outline: none;
+        }
+        
+        input[type="search"] {
+            color: pink
+        }
+        /* ^ : 匹配开头
+
+            $：匹配结尾
+
+            * : 匹配任意位置   */
+        
+        div[class^="icon"] {
+            color: red;
+        }
+        
+        div[class$="icon"] {
+            color: green;
+        }
+        
+        div[class*="icon"] {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <!-- disabled禁用当前标签 -->
+    <button disabled="disabled">按钮</button>
+    <button disabled="disabled">按钮</button>
+    <input type="text" name="" id="" required="required">
+    <input type="text" name="" id="" placeholder="文本框">
+    <input type="search" name="" id="" value="搜索框">
+    <input type="search" name="" id="" value="搜索框">
+    <div class="icon1">图标1</div>
+    <div class="icon2">图标2</div>
+    <div class="icon3">图标3</div>
+    <div class="11icon3">图标3</div>
+    <div class="11icon">图标3</div>
+</body>
+
+</html>
