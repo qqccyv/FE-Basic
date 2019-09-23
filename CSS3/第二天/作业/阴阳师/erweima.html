@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .pic {
+            position: relative;
+            width: 146px;
+            height: 287px;
+            background: url(images/index_z_71df05e.png) no-repeat 0 -1px;
+        }
+        
+        .pic::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 44px;
+            left: 50%;
+            width: 107px;
+            height: 109px;
+            transform: translate(-50%, 0);
+            background: url(images/57b280b496dee47507111c56NRN73rVj.png) no-repeat;
+            background-size: 107px 109px;
+        }
+        
+        .pic::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 44px;
+            left: 50%;
+            width: 120px;
+            height: 14px;
+            transform: translate(-50%, 0);
+            background: url(images/line_dd0b705.png) no-repeat;
+            animation: move 2s linear infinite alternate;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translate(-50%, 0);
+            }
+            100% {
+                transform: translate(-50%, 105px);
+                /* top: 149px; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic">
+
+    </div>
+</body>
+
+</html>
