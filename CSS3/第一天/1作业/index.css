@@ -1,0 +1,105 @@
+.nav {
+    height: 45px;
+    background-color: #0092D8;
+}
+
+.logo {
+    float: left;
+    height: 25px;
+    width: 64px;
+    margin: 10px 0 0 15px;
+    background: url(images/index_service_sprite@2x.png) no-repeat -105px -10px;
+    background-size: 200px 80px;
+}
+
+.links li {
+    float: left;
+}
+
+.links li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 65px;
+    color: #7FC3E6;
+}
+
+.links li a:hover {
+    color: #fff;
+}
+
+.join {
+    float: right;
+}
+
+li {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 45px;
+}
+
+.search {
+    position: relative;
+    width: 44px;
+    height: 45px;
+    transition: width 0.4s ease-in;
+}
+
+input[type="search"] {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
+}
+
+.icon_search {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    /* margin-top: 12px; */
+    background: url(images/index_sprite.png) no-repeat -96px -216px;
+    cursor: pointer;
+}
+
+.search:hover {
+    width: 200px;
+}
+
+.search:hover input {
+    display: block;
+}
+
+.search:hover .icon_search {
+    top: 14px;
+    background: url(images/index_sprite.png) no-repeat -65px -216px;
+}
+
+.join li:nth-of-type(2) {
+    width: 60px;
+    height: 45px;
+}
+
+.icon_phone {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 18px;
+    height: 21px;
+    /* margin-top: 12px; */
+    background: url(images/index_sprite.png) no-repeat -121px -215px;
+    cursor: pointer;
+}
+
+.icon_car {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    /* margin-top: 12px; */
+    background: url(images/index_sprite.png) no-repeat -147px -215px;
+    cursor: pointer;
+}
