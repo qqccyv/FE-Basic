@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .run1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 171px;
+            height: 157px;
+            background: url(images/txgq_d281c9b.png) no-repeat;
+            opacity: 0;
+            animation: run1 0.4s steps(2) infinite, run 15s linear infinite;
+        }
+        
+        .run2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 161px;
+            height: 149px;
+            background: url(images/txgl_c15cfd8.png) no-repeat;
+            opacity: 0;
+            animation: run2 0.4s steps(2) infinite, run 15s linear 2s infinite;
+        }
+        
+        .run3 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 167px;
+            height: 176px;
+            background: url(images/txgh_fee2457.png) no-repeat;
+            opacity: 0;
+            animation: run3 0.4s steps(2) infinite, run 15s linear 4s infinite;
+        }
+        
+        .run4 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 154px;
+            height: 121px;
+            background: url(images/txgc_6d0e9e5.png) no-repeat;
+            opacity: 0;
+            /* display: none; */
+            animation: run4 0.4s steps(2) infinite, run 15s linear 6s infinite;
+        }
+        
+        @keyframes run {
+            0% {
+                /* display: block; */
+                opacity: 1;
+                transform: translate(-200px, 0);
+            }
+            100% {
+                /* display: block; */
+                opacity: 1;
+                transform: translate(1920px, 0);
+            }
+        }
+        
+        @keyframes run1 {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -342px 0;
+            }
+        }
+        
+        @keyframes run2 {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -322px 0;
+            }
+        }
+        
+        @keyframes run3 {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -334px 0;
+            }
+        }
+        
+        @keyframes run4 {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -308px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="run1"></div>
+    <div class="run2"></div>
+    <div class="run3"></div>
+    <div class="run4"></div>
+</body>
+
+</html>
