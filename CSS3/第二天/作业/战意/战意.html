@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 背景图顶部居中对齐 */
+        
+        body {
+            /* height: 5000px; */
+            background: url(images/bg_81ab3d6.jpg) no-repeat center top;
+            /* background-attachment: fixed; */
+        }
+        /* 播放组件定位 */
+        
+        .music {
+            position: absolute;
+            top: 230px;
+            right: 360px;
+            width: 91px;
+            height: 91px;
+        }
+        /* 伪元素-旋转背景动画 */
+        
+        .music::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(images/index_z_9769688.png) no-repeat -221px -493px;
+            cursor: pointer;
+            animation: rotate 2s linear infinite;
+        }
+        /* 伪元素播放按钮定位 */
+        
+        .music::after {
+            content: "";
+            /* display: block; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 27px;
+            background: url(images/index_z_9769688.png) no-repeat -2290px -106px;
+            cursor: pointer;
+            /* animation: rotate 2s linear infinite; */
+        }
+        
+        .music:hover::before {
+            animation-play-state: paused;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="music">
+
+    </div>
+    <!-- <i class="play"></i> -->
+</body>
+
+</html>
