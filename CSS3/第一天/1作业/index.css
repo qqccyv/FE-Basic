@@ -14,13 +14,13 @@
 
 .links li {
     float: left;
+    margin-left: 65px;
 }
 
 .links li a {
     display: block;
     height: 45px;
     line-height: 45px;
-    margin-left: 65px;
     color: #7FC3E6;
 }
 
@@ -35,7 +35,7 @@
 li {
     position: relative;
     float: left;
-    width: 60px;
+    /* width: 60px; */
     height: 45px;
 }
 
