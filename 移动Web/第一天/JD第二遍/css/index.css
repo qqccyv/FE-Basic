@@ -1,0 +1,266 @@
+/* 首页样式 */
+
+
+/* 公共样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+div {
+    /* css3盒子模型，不会被border和padding影响盒子宽度 */
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+
+/*点击高亮我们需要清除清除  设置为transparent 完成透明*/
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/*在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+
+input {
+    -webkit-appearance: none;
+}
+
+
+/*禁用长按页面时的弹出菜单*/
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+
+/* 声明图标字体 */
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff2') format('woff2'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* body样式 */
+
+body {
+    /* body宽度与浏览器宽度一致，并设定最大和最小的宽度 */
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    /* 先设置一个高度，方便布局 */
+    height: 5000px;
+    /* 居中对齐 */
+    margin: 0 auto;
+    /* background-color: #ccc; */
+    /* 设置行高为文字字号的1.5倍 */
+    line-height: 1.5;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+}
+
+
+/*header部分 */
+
+header {
+    height: 45px;
+    background-color: #333;
+}
+
+header div {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+header div:nth-child(1) {
+    width: 8%;
+    background: url(../images/close.png) no-repeat center center;
+    background-size: 10px;
+}
+
+header div:nth-child(2) {
+    width: 10%;
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: 30px;
+}
+
+header div:nth-child(3) {
+    width: 57%;
+}
+
+header div:nth-child(4) {
+    width: 25%;
+    background-color: red;
+}
+
+
+/* search-wrap部分 */
+
+.search-wrap {
+    position: fixed;
+    /* position: relative; */
+    width: 100%;
+    height: 45px;
+    min-width: 320px;
+    max-width: 640px;
+}
+
+.search-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    float: left;
+    width: 8%;
+    height: 45px;
+    /* background-color: pink; */
+    background: url(../images/s-btn.png) no-repeat 14px 15px;
+    background-size: 20px 18px;
+}
+
+.search-login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* float: right; */
+    width: 8%;
+    height: 45px;
+    /* background-color: pink; */
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+input[type=search] {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 30px;
+    padding-left: 40px;
+    border-radius: 15px;
+    background: #fff url(../images/jd.png) no-repeat 10px center;
+    background-size: 20px 15px;
+    font-family: "iconfont";
+    font-size: 18px;
+}
+
+
+/* 主题内容区开始 */
+
+
+/* 滑动图部分开始 */
+
+.slider img {
+    width: 100%;
+}
+
+
+/* 滑动图部分结束 */
+
+
+/* 品牌区开始 */
+
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+
+/* 品牌区结束 */
+
+
+/* nav区域开始 */
+
+nav li {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav ul li img {
+    width: 40px;
+    margin: 10px 0;
+}
+
+
+/* nav区域结束 */
+
+
+/* news区域开始 */
+
+.news {
+    margin-top: 20px;
+}
+
+.news div {
+    float: left;
+}
+
+.news div img {
+    width: 100%;
+}
+
+.news div:nth-child(1) {
+    width: 50%;
+}
+
+.news div:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #333;
+}
+
+
+/* news区域结束 */
+
+
+/* 主题内容区结束 */
