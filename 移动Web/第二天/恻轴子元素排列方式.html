@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+            /* 确定主轴 */
+            flex-direction: row;
+            /* 主轴居中 */
+            justify-content: center;
+            /* 恻轴居中 */
+            /* 只能在单行起效果 */
+            align-items: flex-end;
+            /* 拉伸 */
+            /* 拉伸时，子盒子不能给对应的宽高 */
+            /* 拉伸是延恻轴拉伸 */
+            /* align-items: stretch; */
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        
+        span {
+            width: 200px;
+            height: 100px;
+            background-color: purple;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</body>
+
+</html>

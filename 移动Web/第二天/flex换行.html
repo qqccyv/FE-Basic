@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+            /* 默认是不换行，不管多少个盒子，都会强制在一行显示，降低子盒子的宽度 */
+            flex-wrap: wrap;
+        }
+        
+        span {
+            width: 200px;
+            height: 100px;
+            background-color: purple;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+</body>
+
+</html>
