@@ -1,0 +1,8 @@
+div {
+    height: 100px;
+    background-color: pink;
+}
+
+div:nth-child(2) {
+    background-color: purple;
+}

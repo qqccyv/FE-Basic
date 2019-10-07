@@ -1,0 +1,14 @@
+body {
+    display: flex;
+}
+
+div {
+    flex: 1;
+    /* float: left; */
+    height: 100px;
+    background-color: pink;
+}
+
+div:nth-child(2) {
+    background-color: purple;
+}

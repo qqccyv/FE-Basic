@@ -1,0 +1,17 @@
+// 定义变量
+@color: pink;
+@font14: 14px;
+// 嵌套
+div {
+    width: 200px;
+    height: 200px;
+    background-color: @color;
+    a {
+        color: purple;
+        font-size: @font14;
+        // 伪元素
+        &:hover {
+            color: red;
+        }
+    }
+}

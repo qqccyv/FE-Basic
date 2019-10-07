@@ -1,0 +1,80 @@
+// 首页的样式文件
+// 导入common基本样式
+@import "common";
+@basefont: 50;
+// 设置body基本样式
+body {
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial,Helvetica;
+    background: #F2F2F2;
+    height: 3000px;
+}
+a {
+    text-decoration: none;
+}
+
+// 顶部搜索框
+.search-content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 15rem;
+    height: 88rem / @basefont;
+    background-color: #ffc001;
+    
+    .classify {
+        width: 44rem / @basefont;
+        height: 70rem / @basefont;
+        background: url(../images/classify.png) no-repeat;
+        background-size: 44rem / @basefont 70rem / @basefont;
+        margin: 11rem / @basefont 25rem / @basefont 7rem / @basefont 24rem / @basefont;
+    }
+    .search {
+        flex: 1;
+        // background-color: purple;
+        input {
+            outline: none;
+            border: 0;
+            width: 100%;
+            height: 66rem / @basefont;
+            border-radius: 33rem / @basefont;
+            margin-top: 12rem / @basefont;
+            font-size: 25rem / @basefont;
+            // padding-left: 55rem / @basefont;
+            text-indent: 2em;
+            color: #757575;
+        }
+    }
+    .login {
+        width: 75rem / @basefont;
+        height: 70rem / @basefont;
+        margin: 10rem / @basefont;
+        line-height: 70rem / @basefont;
+        font-size: 25rem / @basefont;
+        text-align: center;
+        color: #fff;
+    }
+}
+// banner部分
+.banner {
+    padding-top: 88rem / @basefont;
+    width: 750rem / @basefont;
+    height: 368rem / @basefont;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+// 广告部分
+.ad {
+    display: flex;
+    img {
+        flex: 1;
+        width: 100%;
+    }
+}
