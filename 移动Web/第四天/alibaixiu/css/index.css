@@ -1,0 +1,206 @@
+/* 修改container的最大宽度，根据设计稿修改 */
+
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 1280px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+} */
+
+header {
+    padding-left: 0 !important;
+}
+
+.logo {
+    text-align: center;
+    background-color: #4199D9;
+}
+
+.logo img {
+    /* display: block; */
+    /* width: 100%; */
+    /* logo图片不要缩放 */
+    max-width: 100%;
+    /* margin: 0 auto; */
+}
+
+
+/* 到达超小屏幕时，就隐藏logo图片 */
+
+
+/* 同时显示文字 */
+
+.logo span {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* 进入小屏幕时，浮动一行排列 */
+
+@media screen and (max-width: 991px) {
+    .nav li {
+        float: left;
+        width: 20%;
+    }
+    article {
+        margin-top: 10px;
+    }
+    aside {
+        margin-top: 10px;
+    }
+}
+
+
+/* 进入超小屏幕时，字号变小 */
+
+@media screen and (max-width: 767px) {
+    .nav li a {
+        font-size: 14px;
+    }
+    .news ul li:nth-child(1) {
+        width: 100% !important;
+    }
+    .news ul li {
+        width: 50%;
+    }
+    .publish h3 {
+        font-size: 16px;
+    }
+}
+
+.nav a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    font-size: 16px;
+    color: #666;
+}
+
+.nav a:hover {
+    background-color: #fff;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav a::before {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.news li {
+    float: left;
+    width: 25%;
+    height: 128px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.news li:nth-child(1) {
+    width: 50%;
+    height: 266px;
+    /* background-color: pink; */
+}
+
+.news a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.news a img {
+    width: 100%;
+    height: 100%;
+}
+
+.news li a p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 41px;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.news li:nth-child(1) p {
+    line-height: 41px;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.publish {
+    border-top: 1px solid #ccc;
+}
+
+.publish .row {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.publish .row img {
+    width: 100%;
+    margin-top: 9px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.hot {
+    display: block;
+    margin-top: 20px;
+    padding: 0 20px 20px;
+    border: 1px solid #ccc;
+}
+
+.hot span {
+    border-radius: 0;
+}
+
+.hot h4 {
+    margin: 30px 0 10px;
+}
+
+.hot p {
+    font-size: 12px;
+    color: #666;
+}
