@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var num = 10;
+        // 转换 用的最多
+        var str = num.toString();
+        console.log(str);
+
+        console.log(typeof(str));
+        // 转换
+        console.log(String(num));
+        // 转换
+        console.log(num + '');
+
+        // var age = prompt('请输入您的年龄');
+        // 会取整，且会去掉单位，不能以非数字开头
+        // console.log(parseInt(age));
+        // 不会取整，但是同样会去掉单位
+        // console.log(parseFloat(2.14));
+        // console.log(parseFloat('120px'));
+
+        var str = '123';
+        console.log(Number(str));
+        console.log(Number('12'));
+        // 利用运算
+        console.log('123' - 0);
+        // 加法不行
+        console.log('123' + '1');
+        console.log('123' + 1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
