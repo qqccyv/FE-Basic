@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var time = prompt('请问现在几点了？');
+        if (parseFloat(time) >= 19 && parseFloat(time) <= 24) {
+            alert('晚上好');
+        } else if (parseFloat(time) > 12 && parseFloat(time) <= 24) {
+            alert('下午好');
+        } else if (parseFloat(time) > 6 && parseFloat(time) <= 24) {
+            alert('上午好');
+        } else if (parseFloat(time) >= 0 && parseFloat(time) <= 24) {
+            alert('现在是休息时间，不要说话！');
+        } else {
+            alert('有这个时间吗？')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
