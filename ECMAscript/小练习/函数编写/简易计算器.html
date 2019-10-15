@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Number(index);
+        var index = prompt('欢迎使用简易计算器：\n 1.加法运算：\n 2.减法运算：\n 3.乘法运算：\n 4.除法运算 \n 5.退出');
+        var a = parseFloat(prompt('请输入第一个值'));
+        var b = parseFloat(prompt('请输入第二个值'));
+
+        var sum;
+
+        function count(a, b) {
+            switch (index) {
+                case '1':
+                    sum = a + b;
+                    break;
+                case '2':
+                    sum = a - b;
+                    break;
+                case '3':
+                    sum = a * b;
+                    break;
+                case '4':
+                    sum = a / b;
+                    break;
+                default:
+                    sum = '没有匹配结果';
+            }
+            return sum;
+        }
+        // counter(a, b);
+        alert(count(a, b));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
