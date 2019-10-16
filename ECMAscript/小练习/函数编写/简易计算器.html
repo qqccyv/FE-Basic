@@ -9,32 +9,46 @@
     <script>
         // Number(index);
         var index = prompt('欢迎使用简易计算器：\n 1.加法运算：\n 2.减法运算：\n 3.乘法运算：\n 4.除法运算 \n 5.退出');
-        var a = parseFloat(prompt('请输入第一个值'));
-        var b = parseFloat(prompt('请输入第二个值'));
-
+        // if (index == 5) {
+        //     alert("退出")
+        // }
         var sum;
+        // while (index != 5) {
+        function count(index) {
+            while (index != 5) {
+                var index = prompt('欢迎使用简易计算器：\n 1.加法运算：\n 2.减法运算：\n 3.乘法运算：\n 4.除法运算 \n 5.退出');
+                var a = parseFloat(prompt('请输入第一个值'));
+                var b = parseFloat(prompt('请输入第二个值'));
+                switch (index) {
 
-        function count(a, b) {
-            switch (index) {
-                case '1':
-                    sum = a + b;
-                    break;
-                case '2':
-                    sum = a - b;
-                    break;
-                case '3':
-                    sum = a * b;
-                    break;
-                case '4':
-                    sum = a / b;
-                    break;
-                default:
-                    sum = '没有匹配结果';
+                    case '1':
+                        sum = a + b;
+                        break;
+                    case '2':
+                        sum = a - b;
+                        break;
+                    case '3':
+                        sum = a * b;
+                        break;
+                    case '4':
+                        sum = a / b;
+                        break;
+                    default:
+                        // alert("")
+                        break;
+                }
+                alert(sum)
+                    // return sum
             }
-            return sum;
+
+            alert("已退出")
+            return
+            // return sum;
         }
+        // }
         // counter(a, b);
-        alert(count(a, b));
+        // alert(count(index));
+        count(index)
     </script>
 </head>
 
@@ -42,4 +56,4 @@
 
 </body>
 
-</html>
+</htm
