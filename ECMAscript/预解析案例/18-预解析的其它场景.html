@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 实参赋值给形参的过程,预解析的过程?  
+    // 先赋值(相当于有了局部变量)  后预解析
+    // function fn(a) {  // var a = 100
+    //     console.log( a );
+    //     a = 10;
+    //     console.log( a );
+    // }
+
+    // fn(100);
+    // // ------------------------------------------
+    // // 当变量名与函数名 相同 的情况:
+    // function foo ( a ) {   // var a = 100
+    // 	console.log( a );
+    // 	var a = 10;
+    // 	console.log( a );
+    // 	function a () {
+    // 		console.log( a );
+    // 	}
+    // 	a();
+    // }
+    // foo(100)
+
+    // -----------------------------
+    // 函数限定作用域 其它{}不限定
+    console.log(a);
+    var a = 8;
+
+    function fn() {
+        console.log(a);
+        a = 15;
+    }
+    fn();
+    console.log(a);
+</script>
+
+</html>

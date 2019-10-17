@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 预解析：
+// 预：预备  
+// 解析：执行代码 
+
+// 浏览器分为两块：渲染引擎    解析引擎
+// 书：粗看，精读
+
+// 代码：解析引擎执行代码时，分为两步：1.扫描（预解析） 2.执行
+
+    // var a = 123;
+
+    // function fn(){
+    //     console.log('abc');  
+    // }
+
+// 只扫描全局
+// 预解析只扫描两个关键词：var  function
+// 1.var 做了1事情
+    // 在内存中开辟了一个空间：
+    // 如果当前环境下已经有了同名的这个空间（不再开辟了）
+    // console.log(a);
+    // var a = 10;
+    // console.log(a);
+    // console.log(b);
+
+// 2. function 做了2事件    (是声明式的function)
+    // 第一步：在内存中开辟了一个空间 函数名
+    // 如果当前环境下已经有了同名的这个空间（不再开辟了）
+    // 第二步: 将这个函数名与函数体做了一个结合 
+    fn()
+    function fn(){
+        console.log("abc");
+    }
+// --------------------------------------
+    var a = true; 
+    function fn(){   // var a = undefined
+        if(!a){ 
+            var a = 10;
+        }
+        console.log(a);
+    }
+    fn();
+</script>
+</html>
