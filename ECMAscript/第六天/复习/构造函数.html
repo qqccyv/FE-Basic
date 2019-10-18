@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang) {
+                console.log(sang);
+
+            }
+        }
+        var ldh = new Star('刘德华', 18, 'man');
+        ldh.sing('冰雨');
+        console.log(ldh);
+        console.log(ldh.name);
+        var zxy = new Star('张学友', 19, 'man');
+        zxy.sing('kissbye');
+        console.log(zxy);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

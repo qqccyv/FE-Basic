@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 50));
+        var arr = ['赵', '钱', '孙', '李', '周', '吴'];
+        console.log(arr[getRandom(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

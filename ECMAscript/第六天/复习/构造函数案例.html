@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log(Hero); //预解析 地址
+
+        function Hero(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(attack) {
+                console.log(attack);
+            }
+        }
+
+        console.log(lianPO); //预解析undefined
+        var lianPO = new Hero('廉颇', '力量型', 500);
+        lianPO.attack('近战');
+        console.log(lianPO);
+        var houYi = new Hero('后裔', '射手型', 100);
+        houYi.attack('远程');
+        console.log(houYi);
+        console.log(houYi.type);
+        console.log(houYi['blood']);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
