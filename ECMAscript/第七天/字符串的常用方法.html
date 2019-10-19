@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var str = '我爱成都小甜甜';
+        console.log(str.substr(0, 4)); //4是截取4个元素的意思  0是从0号索引号开始截取
+        console.log(str.substr(4));
+        console.log(str.substring(4, str.length + 1)); //从0开始，截止到6号的前一个 所以加1
+
+        //替换
+        var str1 = '我爱成都小甜甜，小甜甜们';
+        console.log(str1.replace('小甜甜', '小太妹'));
+
+        //字符串分割
+        var str = '天，地，人';
+        console.log(str.split(','));
+
+        //大小写转换
+        console.log('abc'.toUpperCase());
+        console.log('ABC'.toLowerCase());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

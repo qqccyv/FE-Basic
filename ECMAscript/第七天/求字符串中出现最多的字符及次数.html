@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var str = 'sadfasdfwadfsdfoawowhhfwh';
+        var obj = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (chars in obj) {
+                obj[chars]++;
+            } else {
+                obj[chars] = 1;
+            }
+        }
+        // console.log(obj);
+        var max = 0;
+        var ch = '';
+        for (var k in obj) {
+            if (obj[k] > max) {
+                max = obj[k];
+                ch = k;
+            }
+        }
+        console.log(max + '---' + ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
