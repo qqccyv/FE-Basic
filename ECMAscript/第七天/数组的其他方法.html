@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //concat数组的合并
+        // var arr = [1, 2, 3];
+        // var arr1 = arr.concat([4, 5, 6], [7, 8, 9]);
+        // console.log(arr1);
+        // console.log(arr); //不影响原数组
+
+
+
+        //数组的截取
+        // var arr = [1, 2, 3, 4, 5, 6];
+        // var arr1 = arr.slice(0, 3); //截取截止索引号的前一位
+        // console.log(arr1);
+        // console.log(arr); //不影响原数组
+
+
+        //数组的截取 splice
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // var arr1 = arr.splice(0, 3); //从0开始截取  截取到数组！！长度！！为3时的元素
+        // console.log(arr1);
+        var newArr = [];
+        while (true) {
+            if (arr.length == 0) {
+                break;
+            }
+            var tempArr = arr.splice(0, 5);
+            newArr.push(tempArr);
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
