@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .times {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid blue;
+            font-size: 30px;
+            color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='time' class="times">2019-9-9</div>
+    <ul>
+        <li id='bird'>春眠不觉晓，处处闻啼鸟</li>
+        <li>春眠不觉晓，处处闻啼鸟</li>
+        <li>春眠不觉晓，处处闻啼鸟</li>
+        <li>春眠不觉晓，处处闻啼鸟</li>
+        <li>春眠不觉晓，处处闻啼鸟</li>
+        <li>春眠不觉晓，处处闻啼鸟</li>
+    </ul>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <script>
+        //根据id
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.log(typeof timer);
+        console.dir(timer);
+        //根据标签名
+        var lis = document.getElementsByTagName('li');
+        //返回的是伪数组，只有一个也是，如果没有则是长度为0的伪数组。
+        //一个对象具有了length属性，就可以叫做伪数组
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+
+        }
+        //根据！具体的某一个父级标签，选择其子元素
+        console.log(document.getElementsByTagName('ul')[0].getElementsByTagName('li')[0] == document.getElementById('bird'));
+        //根据元素的类名
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+        //根据元素的类名，但只选择第一个元素
+        var firstbox = document.querySelector('.box');
+        console.log(firstbox);
+        //全选
+        var allBox = document.querySelectorAll('.box');
+        console.log(allBox);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    //js修改的样式是行内样式，权重会比较高
+    div.onclick = function() {
+        this.style.backgroundColor = 'purple';
+        this.style.width = '250px';
+    }
+</script>
+
+</html>

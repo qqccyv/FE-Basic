@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+    <button>戳我</button>
+</body>
+<script>
+    // var div = document.querySelector('div');
+    var div = document.getElementsByTagName('div')[0]; //标签选择法选择出来的对象是伪数组，所以必须加索引号
+    console.log(div);
+
+    div.onclick = function() {
+        console.log('我被选中了');
+
+    }
+    div.onmouseover = function() {
+        alert('不要');
+    }
+    var button = document.querySelector('button');
+    console.log(button);
+
+    button.onclick = function() {
+        alert('疼');
+    }
+</script>
+
+</html>
