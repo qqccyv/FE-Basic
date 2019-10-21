@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .menu {
+            height: 200px;
+            width: 100px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        .weibo {
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+        }
+        
+        .weibo:hover {
+            background-color: #E8EBEB;
+            color: orange;
+        }
+        
+        .bottombox {
+            display: none;
+        }
+        
+        .subbox {
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;
+            border: 1px solid red;
+        }
+        
+        .subbox:hover {
+            background-color: #E8EBEB;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="weibo">微博</div>
+        <div class="bottombox">
+            <div class="subbox">私信</div>
+            <div class="subbox">评论</div>
+            <div class="subbox">@我</div>
+        </div>
+    </div>
+</body>
+<script>
+    var menu = document.querySelector('.menu');
+    var bottombox = document.querySelector('.bottombox');
+    console.log(bottombox);
+
+    menu.onmouseover = function() {
+        bottombox.style.display = 'block';
+    }
+    menu.onmouseout = function() {
+        bottombox.style.display = 'none';
+    }
+</script>
+
+</html>

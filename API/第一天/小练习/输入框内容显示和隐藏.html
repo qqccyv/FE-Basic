@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="邮箱/ID/手机号">
+</body>
+<script>
+    var input = document.querySelector('input');
+    input.onfocus = function() {
+        input.placeholder = '';
+        this.style.borderColor = 'red';
+    }
+    input.onblur = function() {
+        if (input.placeholder.length == 0) {
+            input.placeholder = '邮箱/ID/手机号';
+            this.style.borderColor = '#ccc';
+        } else {
+            this.style.borderColor = '#ccc';
+        }
+    }
+</script>
+
+</html>
