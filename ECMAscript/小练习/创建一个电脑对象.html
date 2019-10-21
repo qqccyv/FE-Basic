@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Computer(color, weight, brand, type) {
+        this.color = color;
+        this.weight = weight;
+        this.brand = brand;
+        this.type = type;
+        this.look = function() {
+            return '看电影';
+
+        }
+        this.listen = function() {
+            return '听音乐';
+        }
+        this.play = function() {
+            return '玩游戏';
+        }
+        this.write = function() {
+            return '敲代码';
+        }
+    }
+    var shenzhou = new Computer('黑色', '2KG', '神州', '游戏本');
+    for (var k in shenzhou) {
+        console.log(k + ':' + shenzhou[k]);
+
+    }
+    console.log(shenzhou);
+    var l = shenzhou.look();
+    var li = shenzhou.listen();
+    var p = shenzhou.play();
+    var w = shenzhou.write();
+    console.log('我在' + l + '/' + li + '/' + p + '/' + w);
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // var obj = {};
+
+    function getResult() {
+
+        if (arguments.length == 0) {
+            return '请输入数据'
+        }
+        var sum = arguments[0];
+        var max = arguments[0];
+        var min = arguments[0];
+        for (var i = 1; i < arguments.length; i++) {
+            sum += arguments[i];
+            if (max < arguments[i]) {
+                max = arguments[i];
+            }
+            if (min > arguments[i]) {
+                min = arguments[i];
+            }
+
+        }
+        var averages = sum / arguments.length;
+        return {
+            sum: sum,
+            max: max,
+            min: min,
+            averages: averages
+        }
+    }
+
+
+
+    // function sum() {
+    //     var sum = 0;
+
+    //     for (var i = 0; i < arguments.length; i++) {
+    //         sum += arguments[i];
+    //     }
+    //     return sum;
+    // }
+
+    // function max() {
+    //     var max = arguments[0];
+    //     for (var i = 1; i < arguments.length; i++) {
+    //         if (max < arguments[i]) {
+    //             max = arguments[i];
+    //         }
+    //     }
+    //     return max;
+    // }
+
+    // function min() {
+    //     var min = arguments[0];
+    //     for (var i = 1; i < arguments.length; i++) {
+    //         if (min > arguments[i]) {
+    //             min = arguments[i];
+    //         }
+    //     }
+    //     return min;
+    // }
+
+    // function averages() {
+    //     var sum = 0;
+
+    //     for (var i = 0; i < arguments.length; i++) {
+    //         sum += arguments[i];
+    //     }
+    //     var averages = sum / arguments.length;
+    //     return averages;
+    // }
+    console.log(getResult(1, 2, 3, 4, 5, 6, 7, 8, 9));;
+    // console.log(getResult());;
+    // console.log(max(1, 2, 3, 4, 5, 6, 7, 8, 9));;
+    // console.log(averages(1, 2, 3, 4, 5, 6, 7, 8, 9));;
+</script>
+
+</html>

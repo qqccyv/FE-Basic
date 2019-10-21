@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>获取</button>
+    <button>设置</button>
+    <div>性别男，爱好女</div>
+
+
+</body>
+<script>
+    var btns = document.querySelectorAll('button');
+    var div = document.querySelector('div');
+    console.log(btns);
+
+    btns[0].onclick = function() {
+
+
+
+    }
+    btns[1].onclick = function() {
+        div.innerHTML = '<span style="color: orange;">性别男，爱好女</span>';
+    }
+</script>
+
+</html>

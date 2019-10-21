@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var num = 1;
+
+    function demo() {
+        console.log(num);
+
+        function demoSon() {
+            console.log(num);
+            num = 3;
+            console.log(num);
+        }
+        var num = 2
+        demoSon();
+    }
+    demo();
+    // 预解析
+    // num=undefined
+    // demo（）添加一个地址
+    // 执行
+    //num = 1
+    //调用函数demo（）
+    //预解析
+
+    // demoSon（）添加地址
+    //局部num = undefined
+    // 执行
+    // log输出undefined=======》undefined
+    //局部num = 2
+    // 调用demoSon（）函数
+    // 预解析
+    // 没有变化
+    // 执行
+    // log输出num作用域链 上一级为2 =====》2
+    // 全局变量！！！num=3
+    // log输出 3=========》3
+</script>
+
+</html>
