@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div data-film-name='大圣归来' data-name='hero'>大圣归来</div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    console.log(div.getAttribute('data-film-name'));
+
+    //获取自定义属性的值的方法
+    console.log(div.dataset.filmName);
+</script>
+
+</html>

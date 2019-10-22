@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mahatma" type='hero'>齐天大圣</div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    //固有属性的
+    div.id //获取
+    div.id = 'superman' //赋值
+
+
+    //自定义属性的
+    div.getAttribute('type') //获取  兼容固有属性的获取
+
+    div.setAttribute('type', 'bighero'); //赋值
+    console.log(div.getAttribute('type'));
+
+    div.removeAttribute('type') //移除
+</script>
+
+</html>
