@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+</body>
+<script>
+    var btns = document.querySelectorAll('button');
+    btns[0].onclick = function() {
+        alert('11');
+        btns[0].onclick = null;
+    }
+
+
+    //第二种
+    btns[1].addEventListener('click', fn)
+
+    function fn() {
+        alert(22);
+        btns[1].removeEventListener('click', fn)
+    }
+</script>
+
+</html>

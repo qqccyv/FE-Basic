@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+    </ul>
+</body>
+<script>
+    var li = document.createElement('li');
+    var ul = document.querySelector('ul');
+    ul.append(li); //在父元素的末尾添加
+    var lili = document.createElement('li');
+    ul.insertBefore(lili, ul.children[0]); //在指定元素的前面添加
+</script>
+
+</html>
