@@ -125,5 +125,22 @@
         </li>
     </ul>
 </body>
+<script>
+    var nav = document.querySelector('.nav');
+    var lis = nav.children;
+    for (var i = 0; i < lis.length; i++) {
+
+        lis[i].onclick = function() {
+
+            for (var j = 0; j < lis.length; j++) {
+
+
+                lis[j].children[1].style.display = 'none';
+            }
+            this.children[1].style.display = 'block';
+        }
+
+    }
+</script>
 
 </html>
