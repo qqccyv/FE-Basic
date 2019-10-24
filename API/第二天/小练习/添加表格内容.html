@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        tr th:nth-child(1),
+        tr td:nth-child(1) {
+            width: 200px;
+        }
+        
+        tr th:nth-child(2),
+        tr td:nth-child(2) {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div>请输入姓名：<input type="text"></div>
+        <div>请输入邮箱：<input type="email" name="" id=""></div>
+    </form>
+    <button>添加</button>
+    <table border='1' cellspacing='0'>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>邮箱</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+<script>
+    var input = document.querySelectorAll('input');
+    var tbody = document.querySelector('tbody');
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', fn);
+
+    function fn() {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        for (var i = 0; i < input.length; i++) {
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML = input[i].value;
+            input[i].value = '';
+        }
+    }
+</script>
+
+</html>

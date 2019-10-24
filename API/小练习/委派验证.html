@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+        
+        .son {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+<script>
+    var fa = document.querySelector('.father');
+    fa.addEventListener('click', fn, true); //捕获阶段 会先弹出父级的alert 再log子级
+
+    function fn(e) {
+        alert(11)
+        console.log(e.target);
+
+    }
+</script>
+
+</html>
