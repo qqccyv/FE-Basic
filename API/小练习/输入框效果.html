@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+            color: #666;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="性别/年龄">
+</body>
+<script>
+    var input = document.querySelector('input');
+    input.addEventListener('focus', fn)
+
+    function fn() {
+        input.value = '';
+        input.style.borderColor = 'red';
+        input.style.color = 'black';
+    }
+    input.addEventListener('blur', fo)
+
+    function fo() {
+        input.value = '性别/年龄';
+        input.style.borderColor = '';
+        input.style.color = '#666';
+    }
+</script>
+
+</html>

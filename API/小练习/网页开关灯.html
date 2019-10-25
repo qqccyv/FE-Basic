@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>开关</button>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    var body = document.body;
+    btn.addEventListener('click', fn);
+
+    function fn() {
+        if (body.style.backgroundColor == 'black') {
+            body.style.backgroundColor = '#fff';
+        } else {
+            body.style.backgroundColor = 'black';
+        }
+
+    }
+</script>
+
+</html>

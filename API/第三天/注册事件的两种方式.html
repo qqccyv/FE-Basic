@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>传统</button>
+    <button>监听</button>
+</body>
+<script>
+    //传统
+    //监听事件
+
+    var btns = document.querySelectorAll('button');
+    btns[1].addEventListener('click', function() {
+        alert(22);
+    })
+    btns[1].addEventListener('click', function() {
+        alert(33)
+    })
+</script>
+
+</html>

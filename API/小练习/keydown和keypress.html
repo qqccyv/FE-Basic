@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //keydown的keyCode永远是大写字母的值
+    document.addEventListener('keydown', function(e) {
+            console.log('down:' + e.keyCode);
+
+        })
+        //press区分大小写
+    document.addEventListener('keypress', function(e) {
+        console.log('press:' + e.keyCode);
+
+    })
+</script>
+
+</html>

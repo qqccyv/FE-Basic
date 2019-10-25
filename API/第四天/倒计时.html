@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+</body>
+<script>
+    var spans = document.querySelectorAll('span');
+    setInterval(countDown, 1000);
+    var inputTime = +new Date('2019-11-11 0:0:0')
+
+    function countDown() {
+        var nowTime = +new Date();
+        var time = parseInt((inputTime - nowTime) / 1000);
+        var d = parseInt(time / 60 / 60 / 24).toString(2, 0)
+    }
+</script>
+
+</html>
