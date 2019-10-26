@@ -9,14 +9,16 @@
 </head>
 
 <body>
-
+    <div></div>
 </body>
 <script>
-    function callback() {
-        console.log('爆炸了');
-
-    }
-    setTimeout(callback, 3000);
+    console.log(location.search);
+    var parm = location.search.substr(1);
+    // console.log(parm);
+    var arr = parm.split('=');
+    // console.log(arr);
+    var div = document.querySelector('div');
+    div.innerHTML = '欢迎您' + arr[1];
 </script>
 
 </html>

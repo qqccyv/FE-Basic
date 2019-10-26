@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>跳转</button>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function() {
+        //href和assign效果都一样
+        // location.href = 'http://www.baidu.com'; //href属于属性
+
+        // location.assign('http://www.baidu.com'); //assign属于方法
+        //replace会清空跳转记录
+        location.replace('http://www.baidu.com');
+    })
+</script>
+
+</html>

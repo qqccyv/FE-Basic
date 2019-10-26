@@ -12,6 +12,22 @@
     <input type="text"><button>发送</button>
 </body>
 <script>
+    var btn = document.querySelector('button');
+    var time = 3;
+    btn.addEventListener('click', function() {
+        btn.disabled = true;
+        var timer = setInterval(function() {
+            if (time === 0) {
+                clearInterval(timer);
+                btn.innerHTML = '发送';
+                btn.disabled = false;
+                time = 3;
+            } else {
+                btn.innerHTML = time + '秒后才能再次发送';
+                time--;
+            }
+        }, 1000)
+    })
 </script>
 
 </html>
