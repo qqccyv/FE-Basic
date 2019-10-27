@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 100px;
+            line-height: 100px;
+            border: 1px solid skyblue;
+            margin: 200px auto;
+            font-size: 36px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            var div = document.querySelector('div');
+            // var time = +new Date();
+
+            // console.log(year);
+            // console.log(month);
+            // console.log(day);
+            // console.log(weekNum);
+            // console.log(time);
+            setInterval(function() {
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                month = month < 10 ? '0' + month : month;
+                var day = date.getDate();
+                day = day < 10 ? '0' + day : day;
+                var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+                var week = date.getDay();
+                var weekNum = arr[week];
+                var hour = date.getHours();
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? '0' + second : second;
+                div.innerHTML = year + '年' + month + '月' + day + weekNum + hour + ':' + minute + ':' + second;
+            }, 1000)
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+
+</html>

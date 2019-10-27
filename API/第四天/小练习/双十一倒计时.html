@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .count-down {
+            width: 500px;
+            height: 200px;
+            margin: 100px auto;
+        }
+        
+        .title {
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        
+        .time {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        span {
+            background-color: orange;
+            color: #fff;
+            border-radius: 5px;
+        }
+        
+        .time span:nth-child(1) {
+            color: orange;
+            background-color: #fff;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            var spans = document.querySelectorAll('span');
+            var inputTime = +new Date('2019-11-11 00:00:00');
+            count_time()
+            setInterval(count_time, 1000);
+
+            function count_time() {
+                var nowTime = +new Date();
+                var time = parseInt(inputTime - nowTime) / 1000;
+                var d = parseInt(time / 60 / 60 / 24);
+                spans[0].innerHTML = d + '天';
+                var h = parseInt(time / 60 / 60 % 24);
+                h = h < 10 ? '0' + h : h;
+                spans[1].innerHTML = h + '时';
+                var m = parseInt(time / 60 % 60);
+                m = m < 10 ? '0' + m : m;
+                spans[2].innerHTML = m + '分';
+                var s = parseInt(time % 60);
+                s = s < 10 ? '0' + s : s;
+                spans[3].innerHTML = s + '秒';
+
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="count-down">
+        <div class="title">距离光棍节，还有</div>
+        <div class="time">
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+        </div>
+    </div>
+</body>
+
+</html>
