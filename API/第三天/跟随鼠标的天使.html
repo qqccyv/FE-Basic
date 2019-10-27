@@ -9,6 +9,7 @@
     <style>
         img {
             position: absolute;
+            display: none;
         }
     </style>
 </head>
@@ -17,12 +18,16 @@
     <img src="images/angel.gif" alt="">
 </body>
 <script>
-    var pic = document.querySelector('img')
-    document.addEventListener('mousemove', function(e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        pic.style.left = x + 'px';
-        pic.style.top = y + 'px';
+    var img = document.querySelector('img')
+    document.addEventListener('mouseover', function() {
+        img.style.display = 'block';
+        document.addEventListener('mousemove', function(e) {
+            img.style.left = e.pageX - img.offsetWidth / 2 + 'px';
+            img.style.top = e.pageY - img.offsetHeight / 2 + 'px';
+        })
+    })
+    document.addEventListener('mouseout', function() {
+        img.style.display = 'none';
     })
 </script>
 

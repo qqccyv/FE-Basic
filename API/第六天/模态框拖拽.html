@@ -149,36 +149,38 @@
     <!-- 遮盖层 -->
     <div id="bg" class="login-bg"></div>
     <script>
-        // 1. 获取元素
-        var login = document.querySelector('.login');
-        var mask = document.querySelector('.login-bg');
-        var link = document.querySelector('#link');
-        var closeBtn = document.querySelector('#closeBtn');
-        var title = document.querySelector('#title');
-        // 2. 点击弹出层这个链接 link  让mask 和login 显示出来
-        link.addEventListener('click', function() {
-                mask.style.display = 'block';
+        window.addEventListener('load', function() {
+            // 1. 获取元素
+            var login = document.querySelector('.login');
+            var mask = document.querySelector('.login-bg');
+            var link = document.querySelector('#link');
+            var closeBtn = document.querySelector('#closeBtn');
+            var title = document.querySelector('#title');
+            // 2. 点击弹出层这个链接 link  让mask 和login 显示出来
+            link.addEventListener('click', function() {
                 login.style.display = 'block';
+                mask.style.display = 'block';
             })
-            // 3. 点击 closeBtn 就隐藏 mask 和 login 
-        closeBtn.addEventListener('click', function() {
-            mask.style.display = 'none';
-            login.style.display = 'none';
-        })
-        title.addEventListener('mousedown', function(e) {
-            var x = e.pageX - login.offsetLeft;
-            var y = e.pageY - login.offsetTop;
-            // console.log(x + '---' + y);
-            document.addEventListener('mousemove', move)
+            closeBtn.addEventListener('click', function() {
+                login.style.display = 'none';
+                mask.style.display = 'none';
+            })
 
-            function move(e) {
-                login.style.left = e.pageX - x + 'px';
-                login.style.top = e.pageY - y + 'px';
-            }
-            document.addEventListener('mouseup', function() {
-                document.removeEventListener('mousemove', move)
+            title.addEventListener('mousedown', function(e) {
+                var x = e.pageX - login.offsetLeft;
+                var y = e.pageY - login.offsetTop;
+                login.addEventListener('mousemove', move);
+
+                function move(e) {
+                    login.style.left = e.pageX - x + 'px';
+                    login.style.top = e.pageY - y + 'px';
+                }
+                title.addEventListener('mouseup', function() {
+                    login.removeEventListener('mousemove', move)
+                })
             })
-        });
+
+        })
     </script>
 
 </body>
