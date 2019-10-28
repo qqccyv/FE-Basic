@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        span {
+            position: absolute;
+            top: 250px;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="f">移动500</button>
+    <button class="e">移动800</button>
+    <div></div>
+    <span>青青河边草</span>
+</body>
+<script>
+    function animate(obj, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function() {
+            var step = (target - obj.offsetLeft) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            if (obj.offsetLeft == target) {
+                clearInterval(obj.timer)
+            } else {
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }
+        }, 30)
+    };
+    var div = document.querySelector('div');
+    var span = document.querySelector('span');
+    var btn500 = document.querySelector('.f')
+    var btn800 = document.querySelector('.e')
+    btn500.addEventListener('click', function() {
+        animate(span, 500)
+    })
+    btn800.addEventListener('click', function() {
+        animate(span, 800)
+    })
+    animate(div, 300)
+</script>
+
+</html>
