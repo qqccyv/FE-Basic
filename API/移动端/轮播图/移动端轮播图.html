@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            position: relative;
+            width: 100%;
+            height: 79px;
+        }
+        
+        ul {
+            /* position: absolute; */
+            width: 500%;
+            margin-left: -100%;
+        }
+        
+        li {
+            list-style: none;
+            width: 20%;
+            float: left;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        ol {
+            margin: 0;
+            position: absolute;
+            bottom: 10px;
+            right: 5px;
+        }
+        
+        ol li {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .current {
+            width: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <ul>
+            <li>
+                <a href="javascript:;"><img src="upload/focus3.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="upload/focus1.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="upload/focus2.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="upload/focus3.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="upload/focus1.jpg" alt=""></a>
+            </li>
+        </ul>
+
+        <ol>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+        </ol>
+
+    </div>
+</body>
+<script>
+    var banner = document.querySelector('.banner');
+    var ul = banner.children[0];
+    // 获得focus 的宽度
+    var w = banner.offsetWidth;
+    var ol = banner.children[1];
+    // 2. 利用定时器自动轮播图图片
+    var index = 0;
+    var timer = setInterval(function() {
+        index++;
+        var translatex = -index * w;
+        ul.style.transition = 'all .3s';
+        ul.style.transform = 'translateX(' + translatex + 'px)';
+    }, 2000);
+    ul.addEventListener('transitionend', function() {
+
+        // 无缝滚动
+        if (index >= 3) {
+            index = 0;
+            // console.log(index);
+            // 去掉过渡效果 这样让我们的ul 快速的跳到目标位置
+            ul.style.transition = 'none';
+            // 利用最新的索引号乘以宽度 去滚动图片
+            var translatex = -index * w;
+            ul.style.transform = 'translateX(' + translatex + 'px)';
+        } else if (index < 0) {
+            index = 2;
+            ul.style.transition = 'none';
+            // 利用最新的索引号乘以宽度 去滚动图片
+            var translatex = -index * w;
+            ul.style.transform = 'translateX(' + translatex + 'px)';
+        }
+        // 3. 小圆点跟随变化
+        // 把ol里面li带有current类名的选出来去掉类名 remove
+        ol.querySelector('.current').classList.remove('current');
+        // 让当前索引号 的小li 加上 current   add
+        ol.children[index].classList.add('current');
+    });
+</script>
+
+</html>

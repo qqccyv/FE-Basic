@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button class="store">存储</button>
+    <button class="remove">删除</button>
+</body>
+<script>
+    var txt = document.querySelector('#txt');
+    var store = document.querySelector('.store');
+    var remove = document.querySelector('.remove');
+    store.addEventListener('click', function() {
+        var txtvalue = txt.value;
+        //存储
+        window.sessionStorage.setItem('name', txtvalue);
+    });
+    //获取
+    console.log(sessionStorage.getItem('name'));;
+    //删除
+    remove.addEventListener('click', function() {
+        sessionStorage.removeItem('name')
+    })
+</script>
+
+</html>

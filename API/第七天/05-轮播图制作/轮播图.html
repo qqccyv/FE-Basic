@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
         li {
             list-style: none;
         }
@@ -15,15 +20,20 @@
             position: relative;
             width: 721px;
             height: 455px;
-            border: 1px solid #ccc;
+            /* margin: 0;
+            padding: 0; */
+            /* border: 1px solid #ccc; */
             margin: 200px auto;
             overflow: hidden;
         }
         
         ul {
-            margin: 0;
-            padding: 0;
-            width: 400%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* margin: 0;
+            padding: 0; */
+            width: 500%;
         }
         
         .l {
@@ -38,6 +48,7 @@
             color: #fff;
             background-color: rgba(0, 0, 0, 0.3);
             cursor: pointer;
+            z-index: 1;
         }
         
         .r {
@@ -53,17 +64,24 @@
             color: #fff;
             background-color: rgba(0, 0, 0, 0.3);
             cursor: pointer;
+            z-index: 2;
         }
         
         ul li {
+            width: 721px;
             float: left;
+        }
+        
+        ul li img {
+            width: 100%;
         }
         
         ol {
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             left: 50%;
             transform: translate(-50%, 0);
+            z-index: 2;
         }
         
         ol li {
@@ -81,6 +99,7 @@
             background-color: red;
         }
     </style>
+    <script src="js/animate.js"></script>
 </head>
 
 <body>
@@ -107,32 +126,83 @@
     </div>
 </body>
 <script>
-    var banner = document.querySelector('.banner');
-    var ul = document.querySelector('ul');
-    var r = document.querySelector('.r');
-    var l = document.querySelector('.l');
-    var ol = document.querySelector('ol')
+    window.addEventListener('load', function() {
+        var banner = document.querySelector('.banner');
+        var ul = document.querySelector('ul');
+        var r = document.querySelector('.r');
+        var l = document.querySelector('.l');
+        var ol = document.querySelector('ol')
+        var img = document.querySelectorAll('ul img')
+        var w = banner.offsetWidth
+        var circle = 0;
 
-    for (var i = 0; i < ul.children.length; i++) {
-        var li = document.createElement('li');
-        ol.appendChild(li);
-    };
-    banner.addEventListener('mouseenter', function() {
-        r.style.display = 'block';
-        l.style.display = 'block';
-    });
-    banner.addEventListener('mouseleave', function() {
-        r.style.display = 'none';
-        l.style.display = 'none';
-    });
-    for (var i = 0; i < ol.children.length; i++) {
-        ol.children[i].addEventListener('click', function() {
+
+        banner.addEventListener('mouseenter', function() {
+            r.style.display = 'block';
+            l.style.display = 'block';
+        });
+        banner.addEventListener('mouseleave', function() {
+            r.style.display = 'none';
+            l.style.display = 'none';
+        });
+        for (var i = 0; i < ul.children.length; i++) {
+            var li = document.createElement('li');
+            li.setAttribute('index', i);
+            ol.appendChild(li);
+            ol.children[i].addEventListener('click', function() {
+                for (var i = 0; i < ol.children.length; i++) {
+                    ol.children[i].className = '';
+                }
+                this.className = 'current';
+                var index = this.getAttribute('index');
+                num = index; //小圆圈和右键协同
+                circle = index;
+                animate(ul, -index * w);
+            })
+        }
+        ol.children[0].className = 'current';
+        var lili = ul.children[0].cloneNode(true);
+        ul.appendChild(lili);
+        var num = 0;
+
+
+        r.addEventListener('click', function() {
+            if (num == ul.children.length - 1) {
+                ul.style.left = 0;
+                num = 0;
+            }
+            num++;
+            console.log(-num * w);
+
+            animate(ul, -num * w);
+            circle++;
+            if (circle == ol.children.length) {
+                circle = 0;
+            }
             for (var i = 0; i < ol.children.length; i++) {
                 ol.children[i].className = '';
             }
-            this.className = 'current';
+            ol.children[circle].className = 'current';
+        });
+        //-------------------------------------------------------------
+        l.addEventListener('click', function() {
+            if (num == 0) {
+                num = ul.children.length - 1;
+                ul.style.left = -num * banner.offsetWidth + 'px';
+
+            }
+            num--;
+            animate(ul, -num * w);
+            circle--;
+            if (circle < 0) {
+                circle = ol.children.length - 1;
+            }
+            for (var i = 0; i < ol.children.length; i++) {
+                ol.children[i].className = '';
+            }
+            ol.children[circle].className = 'current';
         })
-    }
+    })
 </script>
 
 </html>
