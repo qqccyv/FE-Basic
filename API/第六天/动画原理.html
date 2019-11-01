@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* margin: 200px auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button class="btn1100">1100</button>
+    <button class="btn300">300</button>
+</body>
+<script>
+    var div = document.querySelector('div');
+    var btn1100 = document.querySelector('.btn1100');
+    var btn300 = document.querySelector('.btn300')
+
+    function animate(obj, target, callback) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function() {
+            var step = (target - obj.offsetLeft) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            console.log(step);
+
+            if (obj.offsetLeft == target) {
+                clearInterval(obj.timer);
+                callback && callback();
+            } else {
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }
+        }, 15)
+    }
+    btn1100.addEventListener('click', function() {
+        animate(div, 1100, function() {
+            div.style.backgroundColor = 'skyblue'
+        });
+    });
+    btn300.addEventListener('click', function() {
+        animate(div, 300, function() {
+            div.style.backgroundColor = 'red'
+        })
+
+    })
+</script>
+
+</html>

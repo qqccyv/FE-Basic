@@ -58,6 +58,7 @@
             background: url(images/cloud.gif) no-repeat;
         }
     </style>
+    <script src="./animate.js"></script>
 </head>
 
 <body>
@@ -75,5 +76,22 @@
         </ul>
     </div>
 </body>
+<script>
+    var cloud = document.querySelector('.cloud');
+    var li = document.querySelectorAll('li');
+    var current = 0;
+    for (var i = 0; i < li.length; i++) {
+        li[i].addEventListener('mouseenter', function() {
+            animate(cloud, this.offsetLeft);
+            current = 0;
+        });
+        li[i].addEventListener('mouseleave', function() {
+            animate(cloud, current);
+        });
+        li[i].addEventListener('click', function() {
+            current = this.offsetLeft;
+        });
+    }
+</script>
 
 </html>

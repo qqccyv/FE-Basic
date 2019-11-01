@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>23242</li>
+        <li>23242</li>
+        <li>23242</li>
+        <li class="ttt">23242</li>
+        <li>23242</li>
+    </ul>
+</body>
+<script>
+    $(function() {
+        $('ul > li').css('background-color', 'skyblue')
+        $('ul > li').css({
+                'font-weight': '400',
+                color: 'pink'
+            })
+            // $('.ttt').css('color', 'blue')
+        $('ul li:first').css('color', 'black');
+        $('ul li:eq(1)').css('color', 'orange')
+    })
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li class="rr">sdsdf</li>
+        <li>sdsdf</li>
+        <li class="ll">sdsdf</li>
+        <li>sdsdf</li>
+        <li class="rr">sdsdf</li>
+    </ul>
+</body>
+<script>
+    // $(function() {
+    //     $('div').hide();
+    // })
+    // var div = document.querySelector('div');
+    $(function() {
+        $('.ll').siblings('.rr').css('color', 'red');
+        console.log($('.rr').eq(0)[0].innerHTML);
+        console.log($('ul').children());
+
+    })
+</script>
+
+</html>

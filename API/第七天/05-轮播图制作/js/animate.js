@@ -20,7 +20,7 @@ function animate(obj, target, callback) {
             callback && callback();
 
         } else {
-            console.log(obj.offsetLeft + step);
+            // console.log(obj.offsetLeft + step);
             obj.style.left = obj.offsetLeft + step + 'px';
         }
         // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10

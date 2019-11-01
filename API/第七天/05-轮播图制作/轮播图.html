@@ -140,10 +140,15 @@
         banner.addEventListener('mouseenter', function() {
             r.style.display = 'block';
             l.style.display = 'block';
+            clearInterval(timer);
+            timer = null;
         });
         banner.addEventListener('mouseleave', function() {
             r.style.display = 'none';
             l.style.display = 'none';
+            timer = setInterval(function() {
+                r.click();
+            }, 2000)
         });
         for (var i = 0; i < ul.children.length; i++) {
             var li = document.createElement('li');
@@ -165,43 +170,58 @@
         ul.appendChild(lili);
         var num = 0;
 
-
+        var flag = true;
         r.addEventListener('click', function() {
-            if (num == ul.children.length - 1) {
-                ul.style.left = 0;
-                num = 0;
-            }
-            num++;
-            console.log(-num * w);
+            if (flag) {
+                flag = false;
+                if (num == ul.children.length - 1) {
+                    ul.style.left = 0;
+                    num = 0;
+                }
+                num++;
+                // console.log(-num * w);
 
-            animate(ul, -num * w);
-            circle++;
-            if (circle == ol.children.length) {
-                circle = 0;
+                animate(ul, -num * w, function() {
+                    flag = true;
+                });
+                circle++;
+                if (circle == ol.children.length) {
+                    circle = 0;
+                }
+                for (var i = 0; i < ol.children.length; i++) {
+                    ol.children[i].className = '';
+                }
+                ol.children[circle].className = 'current';
             }
-            for (var i = 0; i < ol.children.length; i++) {
-                ol.children[i].className = '';
-            }
-            ol.children[circle].className = 'current';
         });
         //-------------------------------------------------------------
         l.addEventListener('click', function() {
-            if (num == 0) {
-                num = ul.children.length - 1;
-                ul.style.left = -num * banner.offsetWidth + 'px';
+            if (flag) {
+                flag = false;
+                if (num == 0) {
+                    num = ul.children.length - 1;
+                    ul.style.left = -num * banner.offsetWidth + 'px';
 
+                }
+                num--;
+                animate(ul, -num * w, function() {
+                    flag = true;
+                });
+                circle--;
+                if (circle < 0) {
+                    circle = ol.children.length - 1;
+                }
+                for (var i = 0; i < ol.children.length; i++) {
+                    ol.children[i].className = '';
+                }
+                ol.children[circle].className = 'current';
             }
-            num--;
-            animate(ul, -num * w);
-            circle--;
-            if (circle < 0) {
-                circle = ol.children.length - 1;
-            }
-            for (var i = 0; i < ol.children.length; i++) {
-                ol.children[i].className = '';
-            }
-            ol.children[circle].className = 'current';
-        })
+        });
+        var timer = setInterval(function() {
+            r.click();
+        }, 2000)
+
+
     })
 </script>
 
