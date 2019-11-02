@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script>
+    $(function() {
+        var $h1 = $('<h1>Hello World!</h1>');
+        $('div').append($h1);
+        var $h2 = $('<h2>我是后来的</h2>');
+        $('div').prepend($h2);
+        var $h3 = $('<h3>我才是</h3>');
+        $('div').before($h3);
+        var $h4 = $('<h4>那我是谁</h4>');
+        $('div').after($h4);
+    })
+</script>
+
+</html>

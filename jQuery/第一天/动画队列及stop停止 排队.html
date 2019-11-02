@@ -127,12 +127,12 @@
     </ul>
     <script>
         $(function() {
-            // $(".nav>li").mouseenter(function() {
-            //     $(this).children('ul').stop().slideDown(100);
-            // })
-            // $(".nav>li").mouseout(function() {
-            //     $(this).children('ul').stop().slideUp(100);
-            // })
+            $(".nav>li").mouseenter(function() {
+                $(this).children('ul').stop().slideDown(100);
+            })
+            $(".nav>li").mouseleave(function() {
+                $(this).children('ul').stop().slideUp(100);
+            })
 
 
 
@@ -144,9 +144,9 @@
             // })
 
 
-            $(".nav>li").hover(function() {
-                $(this).children("ul").stop().slideToggle(100);
-            })
+            // $(".nav>li").hover(function() {
+            //     $(this).children("ul").stop().slideToggle(100);
+            // })
         })
     </script>
 </body>
