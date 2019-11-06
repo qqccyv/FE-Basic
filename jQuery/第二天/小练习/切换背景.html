@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        
+        .current {
+            background-color: skyblue;
+        }
+    </style>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <button>切换</button>
+    <div></div>
+</body>
+<script>
+    $(function() {
+        // var flag = true;
+        // $('button').click(function() {
+        //     if (flag) {
+
+        //         $('div').css('background-color', 'red')
+        //         flag = false;
+        //     } else {
+        //         $('div').css('background-color', 'orange');
+        //         flag = true;
+        //     }
+
+        // })
+
+
+
+        // $('button').click(function() {
+        //     $('div').toggleClass('current');
+        // })
+
+        var arr = ['red', 'blue', 'skyblue', 'orange', 'pink'];
+        var index = 0;
+        $('button').click(function() {
+            if (index < arr.length) {
+                $('div').css('background-color', arr[index]);
+                index++;
+            } else {
+                index = 0;
+            }
+        })
+    })
+</script>
+
+</html>

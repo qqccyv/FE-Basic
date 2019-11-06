@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid black;
+        }
+        
+        thead tr {
+            height: 40px;
+            background-color: #8A2BE2;
+        }
+    </style>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    请输入姓名：
+    <input type="text"> <br /> 请输入邮箱：
+    <input type="email" name="" id=""> <br /> 请输入手机：
+    <input type="tel" name="" id=""> <br /> 请输入地址：
+    <input type="text" name="" id=""> <br />
+    <button>添加</button>；<br />
+    <table>
+
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>邮箱</td>
+                <td>手机</td>
+                <td>地址</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+<script>
+    $(function() {
+        $("button").on("click", function() {
+            var uname = $("input:eq(0)").val();
+
+            var email = $("input:eq(1)").val();
+            var tel = $("input:eq(2)").val();
+            var dress = $("input:eq(3)").val();
+            if ((uname && email && tel && dress) == '') {
+                alert('请将信息填写完整')
+            };
+            var $tr = $('<tr>');
+            var $td1 = $("<td>" + uname + "</td>")
+            var $td2 = $("<td>" + email + "</td>")
+            var $td3 = $("<td>" + tel + "</td>")
+            var $td4 = $("<td>" + dress + "</td>")
+            $tr.append($td1, $td2, $td3, $td4)
+            $('tbody').append($tr)
+            $('tbody tr:odd').css('background-color', 'red')
+            $('tbody tr:even').css('background-color', 'blue')
+                // console.log($('tbody').length)
+
+
+        })
+
+    })
+</script>
+
+</html>

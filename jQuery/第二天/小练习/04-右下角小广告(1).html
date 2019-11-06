@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .ad {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 230px;
+            height: 120px;
+            background: url(images/ad.jpg);
+        }
+        
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40px;
+            height: 18px;
+            background: url(images/h.jpg);
+        }
+    </style>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="ad">
+        <span></span>
+    </div>
+</body>
+<script>
+    $(function() {
+        $('.ad').slideDown(1000).slideUp(1000).fadeIn(1000);
+        $('span').click(function() {
+            $('.ad').fadeOut(300)
+        })
+    })
+</script>
+
+</html>

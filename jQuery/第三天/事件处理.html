@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        .current {
+            background-color: purple;
+        }
+    </style>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        $(function() {
+            //传统注册事件
+
+            // $('div').click(function() {
+            //     $(this).css('background-color', 'red');
+            // });
+            // $('div').mouseenter(function() {
+            //     $(this).css('background', "purple");
+            // })
+
+
+            //第一种on注册事件
+
+
+            // $('div').on({
+            //     mouseenter: function() {
+            //         $(this).css('background', 'skyblue');
+            //     },
+            //     mouseleave: function() {
+            //         $(this).css('background', 'purple')
+            //     }
+            // })
+
+
+            //第二种on注册事件
+
+            // $('div').on('mouseenter mouseleave', function() {
+            //     $(this).toggleClass('current');
+            // })
+
+
+            $('ul').on('click', 'li', function() {
+                alert(123);
+            });
+            var li = $('<li>我是后来创建的</li>');
+            $('ul').append(li)
+        })
+    </script>
+</body>
+
+</html>
