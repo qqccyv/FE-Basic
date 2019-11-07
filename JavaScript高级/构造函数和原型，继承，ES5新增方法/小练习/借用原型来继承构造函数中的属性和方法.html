@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1. 创建构造函数Father 添加属性和方法
+    function Father(money, cars, house, company) {
+        this.money = money;
+        this.cars = cars;
+        this.house = house;
+        this.company = company;
+    }
+    Father.prototype.manage = function() {
+        console.log('manage');
+
+    };
+    // 2. 创建构造函数Son 通过call来实现属性的继承
+    function Son(money, cars, house, company) {
+        Father.call(this, money, cars, house, company)
+    }
+    Son.prototype = new Father();
+    Son.prototype.constructor = Son;
+    // 子构造函数调用父级方法的时候 还要自身先实例
+    var Son = new Son();
+    Son.manage();
+
+    // 3. 修改Son构造函数的prototype指向
+    // 4. 注意constructor的变化
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Star(uname, age) {}
+    let ldh = new Star('刘德华', 18)
+    console.log(ldh.__proto__ == Star.prototype)
+    console.log(Star.prototype.constructor == Star)
+    console.log(ldh.__proto__.constructor == Star)
+    console.log(Star);
+</script>
+
+</html>

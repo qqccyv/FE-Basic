@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    function Star(uname, age) {
+        this.uname = uname;
+        this.age = age;
+        this.sing = function() {
+            console.log('我会唱歌');
+
+        }
+        //(3)改变了对象当中隐藏的属性"__proto__"执行,让它指向"prototype"原型对象
+        this.__proto__ = Star.prototype
+        //(4)返回了这个对象
+        return this
+    }
+    Star.prototype.sex = '男'
+    //(1)生成了一个空白的对象
+    var o = {}
+    //(2)改变了函数中的this,让他指向这个对象
+    var zxy = Star.call(o, '刘德华', 28 );
+    // console.log(zxy)
+    console.log(zxy.age, zxy.sex)
+    zxy.sing()
+</script>
+</html>

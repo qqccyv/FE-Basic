@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var a = [1, 2, 3]
+        // var b = [];
+    var b = a.forEach(function(value, index, array) {
+            console.log(value += 1);
+
+            return value += 1
+        })
+        //forEach 是没有返回值的 只是用来做简单的遍历
+
+    console.log(b)
+</script>
+
+</html>
