@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    var targetObj = {
+        // id: 0
+    };
+    var obj = {
+        id: 1,
+        name: "andy"
+    };
+    // $.extend(target, obj);
+    $.extend([true], targetObj, obj);
+    console.log(targetObj);
+    console.log(obj);
+</script>
+
+</html>

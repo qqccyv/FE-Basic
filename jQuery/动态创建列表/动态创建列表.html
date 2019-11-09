@@ -31,19 +31,18 @@
         var num = 1;
 
         $('button').on('click', function() {
-
-            $('ul').append($('<li>').append(num));
-            $.each($("ul"), function(i, ele) {
-                $('li').on('mouseenter mouseleave', function() {
-                    $(this).toggleClass('current')
-                })
-
-            });
+            var li = '<li>' + num + '</li>'
+            $('ul').append(li);
             num++;
+            $('ul li').on('mouseenter', function() {
+                $(this).addClass('current');
+            });
+            $('ul li').on('mouseleave', function() {
+                $(this).removeClass('current');
+            });
+
 
         });
-
-
 
     })
 </script>
