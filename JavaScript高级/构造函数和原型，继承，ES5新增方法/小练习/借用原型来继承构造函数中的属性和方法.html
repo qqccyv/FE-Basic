@@ -27,14 +27,13 @@
     function Son(money, cars, house, company) {
         Father.call(this, money, cars, house, company)
     }
+    // 3. 修改Son构造函数的prototype指向
     Son.prototype = new Father();
-    Son.prototype.constructor = Son;
+    // 4. 注意constructor的变化
+    Son.prototype.constructor = Son; //!!!!!!!!!!!!
     // 子构造函数调用父级方法的时候 还要自身先实例
     var Son = new Son();
     Son.manage();
-
-    // 3. 修改Son构造函数的prototype指向
-    // 4. 注意constructor的变化
 </script>
 
 </html>

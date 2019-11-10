@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <button>赞(1)</button>
+    <button>赞(1)</button>
+    <button>赞(1)</button>
+    <button>赞(1)</button>
+    <script>
+        var btns = document.querySelectorAll('button')
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', zan())
+        };
+
+        function zan() {
+            var num = 2;
+            return function() {
+                this.innerHTML = '赞(' + num + ')';
+                num++;
+            }
+        }
+        //闭包函数可以实现变量在特定作用域的延长存在
+    </script>
+</body>
+
+</html>

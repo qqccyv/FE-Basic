@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>20</button>
+    <button>30</button>
+    <button>40</button>
+    <p>我多大了</p>
+</body>
+<script>
+    var btns = document.querySelectorAll('button');
+    var p = document.querySelector('p');
+    //传统绑定事件
+    // for (var i = 0; i < btns.length; i++) {
+    //     btns[i].addEventListener('click', setFont)
+    // };
+
+    // function setFont() {
+    //     p.style.fontSize = this.innerHTML + 'px';
+    // };
+    // btns[0].onclick = setFont;
+    // btns[1].onclick = setFont;
+    // btns[2].onclick = setFont;
+
+    //闭包函数的方法
+    function setFont(fontSize) {
+        return function() {
+            p.style.fontSize = fontSize + 'px';
+        }
+    }
+    btns[0].onclick = setFont(20); //
+
+    btns[1].onclick = setFont(40);
+
+    btns[2].onclick = setFont(60);
+</script>
+
+</html>
