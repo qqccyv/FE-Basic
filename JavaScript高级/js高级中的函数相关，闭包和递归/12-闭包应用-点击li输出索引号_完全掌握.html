@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>榴莲</li>
+        <li>臭豆腐</li>
+        <li>鲱鱼罐头</li>
+        <li>大猪蹄子</li>
+    </ul>
+    <script>
+        // 闭包应用-点击li输出当前li的索引号
+        // 1. 我们可以利用动态添加属性的方式
+        var lis = document.querySelector('.nav').querySelectorAll('li');
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onclick = function(){
+                console.log(i)
+            }
+            
+            // lis[i].index = i
+            //绑定事件
+            //(1).要么在闭包里面
+            //(2).要么右边是闭包
+            /*1.没有用到高阶函数
+            function fun(j){
+                console.log(j)
+                lis[j].onclick = function() {
+                    console.log(j);
+                }
+            }
+            fun(i)
+            */
+            //2.用到了高阶函数
+            /*
+            function fun(j){
+                return function(){
+                    console.log(j)
+                }
+            }
+            lis[i].onclick = fun(i)
+            */
+        }
+        
+    </script>
+</body>
+
+</html>
