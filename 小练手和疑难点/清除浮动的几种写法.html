@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix:after {
+            content: '';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        /* .first {
+            overflow: hidden;
+        }
+         */
+        
+        .first div:nth-child(1) {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        /* .first div:nth-child(2) {
+            clear: both;
+        } */
+        
+        .second {
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="second"></div>
+</body>
+
+</html>

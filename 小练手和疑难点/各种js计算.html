@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // console.log(parseInt('1', 0));
+    // console.log(parseInt('2', 1));
+    // console.log(parseInt('3', 2));
+    // console.log(parseInt("13", 2));
+    function foo(x) {
+        var tmp = 3;
+        return function(y) {
+            alert(x + y + (++tmp));
+        }
+    }
+
+    var bar = foo(2); // bar 现在是一个闭包
+    bar(10)
+        // 结果是16
+        // es6通常用let const块级作用域代替，
+        // 闭包缺点，ie中会引起内存泄漏，严格来说是ie的缺点不是闭包的问题
+</script>
+
+</html>
