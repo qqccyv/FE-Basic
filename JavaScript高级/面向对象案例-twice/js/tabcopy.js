@@ -1,7 +1,7 @@
-var that
+// var that
 class Tab {
     constructor(id) {
-        that = this;
+        // that = this;
         this.main = document.querySelector(id);
 
         this.add = this.main.querySelector('.tabadd')
@@ -10,12 +10,12 @@ class Tab {
         this.init();
     }
     init() {
-        that.updateNode();
-        this.add.onclick = this.addTab;
+        this.updateNode();
+        this.add.onclick = this.addTab.bind(this.add, this);
         for (var i = 0; i < this.lis.length; i++) {
             this.lis[i].index = i;
-            this.lis[i].onclick = this.toggleTab
-            this.remove[i].onclick = this.removeTab;
+            this.lis[i].onclick = this.toggleTab.bind(this.lis[i], this)
+            this.remove[i].onclick = this.removeTab.bind(this.remove[i], this);
             this.spans[i].ondblclick = this.aditTab
             this.sections[i].ondblclick = this.aditTab
         }
@@ -26,7 +26,7 @@ class Tab {
         this.sections = this.main.querySelectorAll('section')
         this.spans = this.main.querySelectorAll('.fisrstnav li span:first-child')
     }
-    toggleTab() {
+    toggleTab(that) {
         that.clearClass();
         this.className = 'liactive';
         that.sections[this.index].className = 'conactive'
@@ -37,7 +37,7 @@ class Tab {
             this.sections[i].className = '';
         }
     }
-    addTab() {
+    addTab(that) {
         that.clearClass();
         var li = '<li class="liactive"><span>测试1</span><span class="iconfont icon-guanbi"></span></li>'
         var section = ' <section class="conactive">测试1</section>'
@@ -46,7 +46,7 @@ class Tab {
         that.init()
 
     }
-    removeTab(e) {
+    removeTab(that, e) {
         e.stopPropagation();
         var index = this.parentNode.index
             // console.log(index);
