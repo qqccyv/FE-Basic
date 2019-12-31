@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>五角星评分案例</title>
+    <style>
+        body {
+            font-family: "simsun";
+        }
+        
+        .comment {
+            font-size: 40px;
+            color: #ff1100;
+        }
+        
+        .comment li {
+            float: left;
+            cursor: pointer;
+        }
+        
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="./jquery-1.11.1.js"></script>
+</head>
+
+<body>
+
+
+    <ul class="comment">
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+    </ul>
+
+
+</body>
+<script>
+    $(function() {
+        var KX_WJX = "☆";
+        var SX_WJX = "★";
+        $(".comment").on({
+            mouseenter: function() {
+                $(this).text(SX_WJX).prevAll('li').text(SX_WJX)
+                $(this).nextAll('li').text(KX_WJX)
+            },
+            mouseleave: function() {
+                console.log($(this).length);
+
+                if ($('.current').length === 0) {
+                    $(".comment li").text(KX_WJX)
+                } else {
+                    $(this).text(SX_WJX).prevAll('li').text(SX_WJX)
+                    $(this).nextAll('li').text(KX_WJX)
+                }
+            }
+        }, 'li')
+        $('.comment').on('click', 'li', function() {
+
+            $(this).addClass('current').siblings('li').removeClass('current')
+
+        })
+    })
+</script>
+
+</html>
