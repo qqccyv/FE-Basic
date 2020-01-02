@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var a = {
+        name: 'dengyu',
+        sex: 'man',
+        msg: {
+            age: 18
+        }
+    }
+    var b = {
+
+        }
+        //直接赋值对象  不属于拷贝  因为是直接给与了拷贝对象的地址，所以修改对象简单数据类型也会影响对象数据
+        // b = a;
+        // b.sex = 'bigman'
+        // b.msg.age = 30
+
+
+    //浅拷贝 表层for in 循环
+    // for (var k in a) {
+    //     b[k] = a[k]
+    // }
+
+
+
+
+
+    b.sex = 'bigman'
+    b.msg.age = 30
+    console.log(a);
+
+    console.log(b);
+</script>
+
+</html>

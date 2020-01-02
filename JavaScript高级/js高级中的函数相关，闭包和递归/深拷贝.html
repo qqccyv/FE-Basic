@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 深拷贝拷贝多层, 每一级别的数据都会拷贝.
+        var obj = {
+            id: 1,
+            name: 'andy',
+            msg: {
+                age: 18
+            },
+            color: ['pink', 'red']
+        };
+        var o = {};
+        // 封装函数 
+        function deepCopy(newobj, oldobj) {
+            for (var k in oldobj) {
+
+                if (oldobj[k] instanceof Array) {
+                    //这里设置空数组 相当于设置了新对象里面的键名和数据类型，不设置会因赋值的对象未定义而报错
+                    newobj[k] = [];
+                    deepCopy(newobj[k], oldobj[k])
+                } else if (oldobj[k] instanceof Object) {
+                    newobj[k] = {};
+                    deepCopy(newobj[k], oldobj[k])
+                } else {
+                    newobj[k] = oldobj[k]
+                }
+            }
+            return newobj
+        }
+        deepCopy(o, obj);
+        console.log(o);
+
+        // var arr = [];
+        // console.log(arr instanceof Object);
+        o.msg.age = 20;
+        console.log(obj);
+    </script>
+</body>
+
+</html>
